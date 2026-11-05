@@ -28,7 +28,7 @@ index.html        El tablero (página que publica GitHub Pages)
 web/dash.js       Carga los datos y dibuja gráficos y tablas
 web/tokens.css    Tipografía, espacios y estilos base
 tablero/          El tablero tal como corre en Claude (fuente de index.html)
-datos/            Datos en JSON: un archivo por mecanismo y un resumen agregado
+*.json            Datos en la raíz: un archivo por mecanismo y un resumen agregado
 scripts/          Scripts en Ruby que descargan, unen y clasifican los datos
 ```
 
