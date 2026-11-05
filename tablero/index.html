@@ -1,0 +1,1006 @@
+<meta name="dash-one-writer">
+<style>
+/* Paleta azul y blanco: un solo tema claro, aunque el visor esté en modo oscuro.
+   Redefine los colores del tablero dentro de .ix, así todos los componentes la toman. */
+#dash-root .ix {
+  color-scheme: light;
+  --color-bg: #ffffff;
+  --color-panel: #ffffff;
+  --color-fg: #0d2347;
+  --color-fg-muted: #4b6488;
+  --color-border-line: #d6e3f3;
+  --color-ok: #1f63b8;
+  --color-warn: #4a7fc1;
+  --color-bad: #0b2a5b;
+  --cds-chart-muted: #dbe6f3;
+  --cds-chart-grid: #eaf1fa;
+  --cds-chart-axis: #b7cbe4;
+  --cds-chart-status-critical: #0b2a5b;
+  --cds-surface-popover: #ffffff;
+  --cds-border: #c7d8ee;
+  --cds-shadow-popover: 0 6px 18px rgba(13, 35, 71, .14);
+  --cds-text-secondary: #4b6488;
+  /* Estados, del inicio al final del ciclo; "Parado" es el azul más oscuro para que resalte */
+  --ix-e1: #bcd6f2;  /* En trámite */
+  --ix-e2: #e3ebf5;  /* No aprobado */
+  --ix-e3: #8bb8e8;  /* Aprobado sin iniciar */
+  --ix-e4: #4f94dc;  /* En ejecución */
+  --ix-e5: #0b2a5b;  /* Parado */
+  --ix-e6: #1f63b8;  /* Terminado */
+  --ix-e7: #c9d4e2;  /* Sin información */
+  /* Mecanismos */
+  --ix-oxi: #1f63b8;
+  --ix-regalias: #6fa8e6;
+  --ix-cocrea: #0b2a5b;
+  --ix-tinte: #f3f8fe;
+  display: grid; gap: var(--cds-gap-xl); font-family: var(--font-anthropic-sans); color: var(--color-fg);
+  background: var(--color-bg);
+  padding: var(--cds-pad-xl) var(--cds-pad-lg);
+  border-radius: var(--cds-radius);
+  border: 1px solid var(--color-border-line);
+}
+.ix-tabs { background: var(--ix-tinte); border-radius: var(--cds-radius) var(--cds-radius) 0 0; padding-inline: var(--cds-pad-sm); }
+.ix-tab[aria-selected="true"] { color: #0b2a5b; border-bottom-color: #1f63b8; }
+.ix-filters { background: var(--ix-tinte); }
+.ix-chip[aria-pressed="true"] { background: #1f63b8; border-color: #1f63b8; color: #ffffff; }
+.ix-head h1 { color: #0b2a5b; }
+.ix-mec { border-top: 3px solid #1f63b8; }
+.ix-mini { background: var(--cds-chart-grid); }
+.ix-head { display: grid; gap: var(--cds-gap-sm); max-width: 64rem; }
+.ix-eyebrow { margin: 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); letter-spacing: .04em; text-transform: uppercase; }
+.ix-head h1 { margin: 0; font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); text-wrap: balance; }
+.ix-take { margin: 0; font-size: var(--cds-font-size-body); max-width: 70ch; line-height: 1.5; }
+.ix .ix-take b, .ix .ix-lede b, .ix .ix-sel b, .ix .ix-note b { font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.ix-tabs { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); border-bottom: 1px solid var(--color-border-line); }
+.ix-tab { font: inherit; font-size: var(--cds-font-size-body); padding: var(--cds-pad-sm) var(--cds-pad-md); background: none; border: 0; border-bottom: 2px solid transparent; color: var(--color-fg-muted); cursor: pointer; margin-bottom: -1px; }
+.ix-tab[aria-selected="true"] { color: var(--color-fg); border-bottom-color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+.ix-tab:focus-visible, .ix-chip:focus-visible, .ix-btn:focus-visible, .ix-th:focus-visible, .ix-field select:focus-visible, .ix-field input:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+
+.ix-page { display: grid; gap: var(--cds-gap-lg); }
+.ix-page > h2 { margin: 0; font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); }
+.ix-lede { margin: 0; color: var(--color-fg-muted); max-width: 75ch; font-size: var(--cds-font-size-body); line-height: 1.5; }
+.ix-sub { margin: 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.ix-sel { margin: 0; font-size: var(--cds-font-size-body); }
+
+.ix-filters { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: end; background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md); }
+.ix-field { display: grid; gap: 2px; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); flex: 1 1 9rem; min-width: 0; }
+.ix-field.is-grow { flex: 2 1 14rem; }
+.ix-field select, .ix-field input { font: inherit; font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-radius: var(--cds-radius); border: 1px solid var(--color-border-line); background: var(--color-bg); color: var(--color-fg); min-width: 0; width: 100%; }
+.ix-btn { font: inherit; font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-radius: var(--cds-radius); border: 1px solid var(--color-border-line); background: var(--color-bg); color: var(--color-fg); cursor: pointer; }
+.ix-chip { font: inherit; font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-radius: 999px; border: 1px solid var(--color-border-line); background: var(--color-bg); color: var(--color-fg); cursor: pointer; }
+.ix-chip[aria-pressed="true"] { background: var(--color-fg); color: var(--color-bg); border-color: var(--color-fg); }
+
+.ix-mecs { display: grid; gap: var(--cds-gap-md); grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); }
+.ix-mec { display: grid; gap: var(--cds-gap-sm); align-content: start; background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); }
+.ix-mec h3 { margin: 0; font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); display: flex; align-items: center; gap: var(--cds-gap-sm); }
+.ix-mec h3 .ix-sw { width: .7rem; height: .7rem; }
+.ix-big { margin: 0; font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-title); font-weight: 400; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.ix-kv { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 2px var(--cds-gap-md); font-size: var(--cds-font-size-caption); }
+.ix-kv dt { color: var(--color-fg-muted); }
+.ix-kv dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
+.ix-mini { height: 10px; border-radius: 5px; overflow: hidden; display: flex; background: var(--color-border-line); }
+.ix-mini span { display: block; height: 100%; }
+
+.ix-tiles { display: grid; gap: var(--cds-gap-md); grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); }
+.ix-tile { display: grid; gap: var(--cds-gap-xs); align-content: start; background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md) var(--cds-pad-lg); }
+.ix-tile-k { margin: 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.ix-tile-v { margin: 0; font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-title); font-weight: 400; font-variant-numeric: tabular-nums; line-height: 1.1; min-height: 1.1em; }
+
+.ix-grid { display: grid; gap: var(--cds-gap-md); grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
+.ix-card { display: grid; gap: var(--cds-gap-sm); align-content: start; min-width: 0; background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); }
+.ix-card.is-wide { grid-column: 1 / -1; }
+.ix-card h3 { margin: 0; font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); }
+.ix-chart { position: relative; min-height: 10rem; }
+.ix-chart svg { display: block; overflow: visible; }
+.ix-blabel { font-size: 12px; fill: var(--color-fg); }
+.ix-bval, .ix-tick { font-size: 11px; fill: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+.ix-hit { fill: transparent; }
+.ix-hit.is-click { cursor: pointer; }
+.ix-tip { position: absolute; pointer-events: none; z-index: 3; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); max-width: 18rem; display: grid; gap: 2px; }
+.ix-tip .ix-tip-h { color: var(--cds-text-secondary); }
+.ix-tip[hidden] { display: none; }
+.ix-fail { display: flex; align-items: center; justify-content: center; gap: var(--cds-gap-xs); min-height: inherit; height: 100%; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+.ix-fail.is-bad::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+
+.ix-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm) var(--cds-gap-md); margin: 0; padding: 0; list-style: none; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.ix-legend li { display: flex; align-items: center; gap: var(--cds-gap-xs); }
+.ix-sw { width: .75rem; height: .75rem; border-radius: 2px; background: var(--cds-chart-muted); display: inline-block; flex: none; }
+
+.ix-tools { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: center; }
+.ix-count { margin-left: auto; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+.ix-tablewrap { overflow: auto; }
+.ix-tablewrap.is-tall { max-height: 34rem; }
+.ix-table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); }
+.ix-table th { text-align: left; font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; position: sticky; top: 0; background: var(--color-panel); z-index: 1; }
+.ix-table th.ix-r, .ix-table td.ix-r { text-align: right; }
+.ix-th { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+.ix-table td { padding: var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+.ix-table td.ix-num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ix-table tbody tr:last-child td { border-bottom: 0; }
+.ix-strong { font-weight: 600; }
+.ix-name { min-width: 15rem; }
+.ix-name a { color: inherit; text-decoration: underline; text-decoration-color: var(--color-border-line); text-underline-offset: 2px; }
+.ix-caps { text-transform: lowercase; }
+.ix-caps::first-letter { text-transform: uppercase; }
+.ix-pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 11px; white-space: nowrap; border: 1px solid currentColor; }
+.ix-more { justify-self: center; }
+@media (max-width: 40rem) { .ix-hide-n { display: none; } }
+
+.ix-estados { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--cds-gap-sm); grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
+.ix-estados li { display: grid; gap: var(--cds-gap-xs); align-content: start; padding: var(--cds-pad-md); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-panel); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); line-height: 1.45; }
+.ix-estados strong { color: var(--color-fg); font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); display: flex; align-items: center; gap: var(--cds-gap-sm); }
+.ix-note { margin: 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); max-width: 80ch; line-height: 1.5; }
+.ix-notes { margin: 0; padding-left: 1.1rem; display: grid; gap: var(--cds-gap-xs); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); max-width: 85ch; line-height: 1.5; }
+.ix-notes a { color: inherit; }
+
+[data-dash-source-state=empty] { color: transparent; }
+[data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+</style>
+
+<div class="ix" lang="es">
+  <header class="ix-head" id="inicio">
+    <p class="ix-eyebrow">Seguimiento · Obras por Impuestos, Regalías y CoCrea · 2020–2026</p>
+    <h1>Proyectos OxI, Regalías y CoCrea</h1>
+    <p class="ix-take">Entre 2020 y 2026 los tres mecanismos suman <b data-draw="kv" data-source="totales" data-field="proyectos" data-where="mecanismo=Total" class="dash-skeleton">—</b> proyectos. Ya salieron del trámite <b data-draw="kv" data-source="totales" data-field="aprobados" data-where="mecanismo=Total" class="dash-skeleton">—</b>: de ellos <b data-draw="kv" data-source="totales" data-field="terminados" data-where="mecanismo=Total" class="dash-skeleton">—</b> están terminados y <b data-draw="kv" data-source="totales" data-field="parados" data-where="mecanismo=Total" class="dash-skeleton">—</b> están parados. El mecanismo con más proyectos parados en proporción es <b data-draw="peor" data-source="totales" class="dash-skeleton">—</b>.</p>
+  </header>
+
+  <nav class="ix-tabs" role="tablist" aria-label="Secciones">
+    <button type="button" class="ix-tab" role="tab" data-tab="comparado" aria-selected="true">Comparado</button>
+    <button type="button" class="ix-tab" role="tab" data-tab="oxi" aria-selected="false">Obras por Impuestos</button>
+    <button type="button" class="ix-tab" role="tab" data-tab="regalias" aria-selected="false">Regalías</button>
+    <button type="button" class="ix-tab" role="tab" data-tab="cocrea" aria-selected="false">CoCrea</button>
+    <button type="button" class="ix-tab" role="tab" data-tab="metodo" aria-selected="false">Método y fuentes</button>
+  </nav>
+
+  <!-- ======================= COMPARADO ======================= -->
+  <section class="ix-page" id="comparado" data-page="comparado">
+    <p class="ix-lede">Los tres mecanismos con un mismo estado. Regalías cubre solo los <span data-draw="kv" data-source="territorios" data-field="total" data-row="0">—</span> municipios PDET y ZOMAC; Obras por Impuestos y CoCrea, todo el país. Filtra por año, territorio o departamento.</p>
+    <div class="ix-filters">
+      <label class="ix-field" for="c-anio">Año
+        <select id="c-anio" data-draw="cf-anio" data-source="resumen"></select>
+      </label>
+      <label class="ix-field" for="c-foco">Territorio
+        <select id="c-foco" class="ix-cfoco">
+          <option value="">Todos</option>
+          <option value="foco">Municipios PDET o ZOMAC</option>
+          <option value="fuera">Fuera de PDET y ZOMAC</option>
+        </select>
+      </label>
+      <label class="ix-field" for="c-depto">Departamento
+        <select id="c-depto" data-draw="cf-depto" data-source="resumen"></select>
+      </label>
+      <button type="button" class="ix-btn ix-climpiar" hidden>Quitar filtros</button>
+    </div>
+
+    <div class="ix-mecs">
+      <article class="ix-mec" id="mec-oxi">
+        <h3><span class="ix-sw" data-mec-color="OxI"></span>Obras por Impuestos</h3>
+        <p class="ix-big"><span data-draw="cv" data-mec="OxI" data-k="proyectos" data-source="resumen" class="dash-skeleton">—</span> proyectos</p>
+        <div class="ix-mini" data-draw="cmini" data-mec="OxI" data-source="resumen"></div>
+        <dl class="ix-kv">
+          <dt>Valor aprobado</dt><dd data-draw="cv" data-mec="OxI" data-k="valor" data-source="resumen">—</dd>
+          <dt>En trámite</dt><dd data-draw="cv" data-mec="OxI" data-k="e1" data-source="resumen">—</dd>
+          <dt>En ejecución</dt><dd data-draw="cv" data-mec="OxI" data-k="e4" data-source="resumen">—</dd>
+          <dt>Parados</dt><dd data-draw="cv" data-mec="OxI" data-k="e5" data-source="resumen">—</dd>
+          <dt>Terminados</dt><dd data-draw="cv" data-mec="OxI" data-k="e6" data-source="resumen">—</dd>
+          <dt>Parados entre los aprobados</dt><dd data-draw="cv" data-mec="OxI" data-k="pparado" data-source="resumen">—</dd>
+        </dl>
+      </article>
+      <article class="ix-mec" id="mec-regalias">
+        <h3><span class="ix-sw" data-mec-color="Regalías"></span>Regalías</h3>
+        <p class="ix-big"><span data-draw="cv" data-mec="Regalías" data-k="proyectos" data-source="resumen" class="dash-skeleton">—</span> proyectos</p>
+        <div class="ix-mini" data-draw="cmini" data-mec="Regalías" data-source="resumen"></div>
+        <dl class="ix-kv">
+          <dt>Valor aprobado</dt><dd data-draw="cv" data-mec="Regalías" data-k="valor" data-source="resumen">—</dd>
+          <dt>En trámite</dt><dd data-draw="cv" data-mec="Regalías" data-k="e1" data-source="resumen">—</dd>
+          <dt>En ejecución</dt><dd data-draw="cv" data-mec="Regalías" data-k="e4" data-source="resumen">—</dd>
+          <dt>Parados</dt><dd data-draw="cv" data-mec="Regalías" data-k="e5" data-source="resumen">—</dd>
+          <dt>Terminados</dt><dd data-draw="cv" data-mec="Regalías" data-k="e6" data-source="resumen">—</dd>
+          <dt>Parados entre los aprobados</dt><dd data-draw="cv" data-mec="Regalías" data-k="pparado" data-source="resumen">—</dd>
+        </dl>
+      </article>
+      <article class="ix-mec" id="mec-cocrea">
+        <h3><span class="ix-sw" data-mec-color="CoCrea"></span>CoCrea</h3>
+        <p class="ix-big"><span data-draw="cv" data-mec="CoCrea" data-k="proyectos" data-source="resumen" class="dash-skeleton">—</span> proyectos</p>
+        <div class="ix-mini" data-draw="cmini" data-mec="CoCrea" data-source="resumen"></div>
+        <dl class="ix-kv">
+          <dt>Valor de los proyectos</dt><dd data-draw="cv" data-mec="CoCrea" data-k="valor" data-source="resumen">—</dd>
+          <dt>Valor solicitado a CoCrea</dt><dd data-draw="cv" data-mec="CoCrea" data-k="solicitado" data-source="resumen">—</dd>
+          <dt>Avalados sin iniciar</dt><dd data-draw="cv" data-mec="CoCrea" data-k="e3" data-source="resumen">—</dd>
+          <dt>En ejecución</dt><dd data-draw="cv" data-mec="CoCrea" data-k="e4" data-source="resumen">—</dd>
+          <dt>Parados (aval vencido)</dt><dd data-draw="cv" data-mec="CoCrea" data-k="e5" data-source="resumen">—</dd>
+          <dt>Ejecutados</dt><dd data-draw="cv" data-mec="CoCrea" data-k="e6" data-source="resumen">—</dd>
+          <dt>Parados entre los avalados</dt><dd data-draw="cv" data-mec="CoCrea" data-k="pparado" data-source="resumen">—</dd>
+        </dl>
+      </article>
+    </div>
+
+    <ul class="ix-legend" aria-label="Estados">
+      <li><span class="ix-sw" data-estado-color="1"></span>En trámite</li>
+      <li><span class="ix-sw" data-estado-color="2"></span>No aprobado</li>
+      <li><span class="ix-sw" data-estado-color="3"></span>Aprobado sin iniciar</li>
+      <li><span class="ix-sw" data-estado-color="4"></span>En ejecución</li>
+      <li><span class="ix-sw" data-estado-color="5"></span>Parado</li>
+      <li><span class="ix-sw" data-estado-color="6"></span>Terminado</li>
+      <li><span class="ix-sw" data-estado-color="7"></span>Sin información</li>
+    </ul>
+
+    <div class="ix-grid">
+      <div class="ix-card is-wide" id="card-c-estado">
+        <h3>Estado de los proyectos por mecanismo</h3>
+        <p class="ix-sub">Parte de los proyectos de cada mecanismo en cada estado. Pasa el cursor para ver las cifras.</p>
+        <div class="ix-chart dash-skeleton" data-draw="c-estado" data-source="resumen"></div>
+      </div>
+      <div class="ix-card is-wide" id="card-c-anio">
+        <h3>Proyectos por año y estado</h3>
+        <p class="ix-sub">Año de aprobación (OxI), de registro del BPIN (Regalías) o de convocatoria (CoCrea). Cada mecanismo tiene su propia escala.</p>
+        <div class="ix-chart dash-skeleton" data-draw="c-anio" data-source="resumen"></div>
+      </div>
+      <div class="ix-card" id="card-c-parados">
+        <h3>Departamentos con más proyectos parados</h3>
+        <p class="ix-sub">Los doce primeros, por mecanismo.</p>
+        <ul class="ix-legend">
+          <li><span class="ix-sw" data-mec-color="OxI"></span>OxI</li>
+          <li><span class="ix-sw" data-mec-color="Regalías"></span>Regalías</li>
+          <li><span class="ix-sw" data-mec-color="CoCrea"></span>CoCrea</li>
+        </ul>
+        <div class="ix-chart dash-skeleton" data-draw="c-parados" data-source="resumen"></div>
+      </div>
+      <div class="ix-card" id="card-c-sector">
+        <h3>Proyectos aprobados por sector</h3>
+        <p class="ix-sub">Sin contar los que siguen en trámite o no se aprobaron. Grupos de sector comunes a los tres mecanismos.</p>
+        <div class="ix-chart dash-skeleton" data-draw="c-sector" data-source="resumen"></div>
+      </div>
+    </div>
+
+    <div class="ix-card" id="card-c-tabla">
+      <h3>Por departamento</h3>
+      <p class="ix-sub">Proyectos y parados de cada mecanismo en la selección, ordenados por parados en total.</p>
+      <div class="ix-tablewrap is-tall" data-source="resumen">
+        <table class="ix-table" id="tabla-departamentos">
+          <thead>
+            <tr>
+              <th>Departamento</th>
+              <th class="ix-r">OxI</th>
+              <th class="ix-r">OxI parados</th>
+              <th class="ix-r">Regalías</th>
+              <th class="ix-r">Regalías parados</th>
+              <th class="ix-r">CoCrea</th>
+              <th class="ix-r">CoCrea parados</th>
+              <th class="ix-r ix-hide-n">Valor aprobado</th>
+            </tr>
+          </thead>
+          <tbody data-draw="c-tabla" data-source="resumen"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= OBRAS POR IMPUESTOS ======================= -->
+  <section class="ix-page" id="oxi" data-page="oxi" hidden>
+    <h2>Obras por Impuestos</h2>
+    <p class="ix-lede">Proyectos aprobados entre 2020 y 2025 (base de resultados de la ART) con su estado en MapaInversiones del DNP, y los proyectos en trámite de 2026 (listado de la ART con corte al 3 de julio). Valores en pesos corrientes.</p>
+    <div class="ix-filters" data-mec="oxi">
+      <label class="ix-field" for="oxi-anio">Año<select id="oxi-anio" data-draw="mf" data-mec="oxi" data-f="anio" data-source="oxi"></select></label>
+      <label class="ix-field" for="oxi-estado">Estado<select id="oxi-estado" data-draw="mf" data-mec="oxi" data-f="estado" data-source="oxi"></select></label>
+      <label class="ix-field" for="oxi-depto">Departamento<select id="oxi-depto" data-draw="mf" data-mec="oxi" data-f="departamento" data-source="oxi"></select></label>
+      <label class="ix-field" for="oxi-grupo">Ministerio<select id="oxi-grupo" data-draw="mf" data-mec="oxi" data-f="entidad" data-source="oxi"></select></label>
+      <label class="ix-field is-grow" for="oxi-q">Buscar<input type="search" id="oxi-q" class="ix-q" data-mec="oxi" placeholder="Proyecto, municipio o BPIN"></label>
+      <button type="button" class="ix-btn ix-mlimpiar" data-mec="oxi" hidden>Quitar filtros</button>
+    </div>
+    <p class="ix-sel">Selección: <b data-draw="msel" data-mec="oxi" data-k="n" data-source="oxi">—</b> proyectos por <b data-draw="msel" data-mec="oxi" data-k="v" data-source="oxi">—</b></p>
+    <div class="ix-tiles">
+      <div class="ix-tile"><p class="ix-tile-k">En trámite</p><p class="ix-tile-v" data-draw="mt" data-mec="oxi" data-k="1" data-source="oxi">—</p></div>
+      <div class="ix-tile"><p class="ix-tile-k">En ejecución</p><p class="ix-tile-v" data-draw="mt" data-mec="oxi" data-k="4" data-source="oxi">—</p></div>
+      <div class="ix-tile"><p class="ix-tile-k">Parados</p><p class="ix-tile-v" data-draw="mt" data-mec="oxi" data-k="5" data-source="oxi">—</p></div>
+      <div class="ix-tile"><p class="ix-tile-k">Terminados</p><p class="ix-tile-v" data-draw="mt" data-mec="oxi" data-k="6" data-source="oxi">—</p></div>
+      <div class="ix-tile"><p class="ix-tile-k">Sin información</p><p class="ix-tile-v" data-draw="mt" data-mec="oxi" data-k="7" data-source="oxi">—</p></div>
+    </div>
+    <div class="ix-grid">
+      <div class="ix-card"><h3>Por año y estado</h3><p class="ix-sub">Clic en un año para filtrar.</p><div class="ix-chart dash-skeleton" data-draw="m-anio" data-mec="oxi" data-source="oxi"></div></div>
+      <div class="ix-card"><h3>Por ministerio y estado</h3><p class="ix-sub">Clic en un ministerio para filtrar.</p><div class="ix-chart dash-skeleton" data-draw="m-grupo" data-mec="oxi" data-source="oxi"></div></div>
+      <div class="ix-card"><h3>Por qué están parados</h3><p class="ix-sub">Motivo de cada proyecto parado en la selección.</p><div class="ix-chart dash-skeleton" data-draw="m-motivo" data-mec="oxi" data-source="oxi"></div></div>
+      <div class="ix-card"><h3>Departamentos con más proyectos</h3><p class="ix-sub">Los doce primeros, por estado. Clic para filtrar.</p><div class="ix-chart dash-skeleton" data-draw="m-depto" data-mec="oxi" data-source="oxi"></div></div>
+    </div>
+    <div class="ix-card" id="tabla-oxi-card">
+      <h3>Proyectos</h3>
+      <div class="ix-tools"><span class="ix-sub">El nombre abre la ficha del proyecto en MapaInversiones.</span><span class="ix-count" data-draw="mcount" data-mec="oxi" data-source="oxi">—</span></div>
+      <div class="ix-tablewrap is-tall">
+        <table class="ix-table" id="tabla-oxi" data-source="oxi" data-row-key="codigo">
+          <thead><tr>
+            <th data-field="estado"><button type="button" class="ix-th" data-mec="oxi" data-sort="estado">Estado</button></th>
+            <th data-field="nombre"><button type="button" class="ix-th" data-mec="oxi" data-sort="nombre">Proyecto</button></th>
+            <th data-field="anio"><button type="button" class="ix-th" data-mec="oxi" data-sort="anio">Año</button></th>
+            <th data-field="entidad" class="ix-hide-n"><button type="button" class="ix-th" data-mec="oxi" data-sort="entidad">Ministerio</button></th>
+            <th data-field="municipio" class="ix-hide-n"><button type="button" class="ix-th" data-mec="oxi" data-sort="municipio">Municipio</button></th>
+            <th data-field="valor_cop" class="ix-r"><button type="button" class="ix-th" data-mec="oxi" data-sort="valor_cop">Valor</button></th>
+            <th data-field="avance" class="ix-r ix-hide-n"><button type="button" class="ix-th" data-mec="oxi" data-sort="avance">Avance</button></th>
+            <th data-field="motivo" class="ix-hide-n">Detalle</th>
+          </tr></thead>
+          <tbody data-draw="mtabla" data-mec="oxi"></tbody>
+        </table>
+      </div>
+      <button type="button" class="ix-btn ix-more" data-mec="oxi" hidden>Mostrar 200 más</button>
+    </div>
+  </section>
+
+  <!-- ======================= REGALÍAS ======================= -->
+  <section class="ix-page" id="regalias" data-page="regalias" hidden>
+    <h2>Regalías en municipios PDET y ZOMAC</h2>
+    <p class="ix-lede">Proyectos del Sistema General de Regalías con BPIN desde 2020 y localización en al menos un municipio PDET o ZOMAC, según MapaInversiones del DNP (datos.gov.co). Los que siguen en formulación o viabilidad están aparte, abajo.</p>
+    <div class="ix-filters" data-mec="regalias">
+      <label class="ix-field" for="regalias-anio">Año<select id="regalias-anio" data-draw="mf" data-mec="regalias" data-f="anio" data-source="regalias"></select></label>
+      <label class="ix-field" for="regalias-estado">Estado<select id="regalias-estado" data-draw="mf" data-mec="regalias" data-f="estado" data-source="regalias"></select></label>
+      <label class="ix-field" for="regalias-depto">Departamento<select id="regalias-depto" data-draw="mf" data-mec="regalias" data-f="departamento" data-source="regalias"></select></label>
+      <label class="ix-field" for="regalias-grupo">Sector<select id="regalias-grupo" data-draw="mf" data-mec="regalias" data-f="sector" data-source="regalias"></select></label>
+      <label class="ix-field is-grow" for="regalias-q">Buscar<input type="search" id="regalias-q" class="ix-q" data-mec="regalias" placeholder="Proyecto, municipio, entidad o BPIN"></label>
+      <button type="button" class="ix-btn ix-mlimpiar" data-mec="regalias" hidden>Quitar filtros</button>
+    </div>
+    <p class="ix-sel">Selección: <b data-draw="msel" data-mec="regalias" data-k="n" data-source="regalias">—</b> proyectos por <b data-draw="msel" data-mec="regalias" data-k="v" data-source="regalias">—</b></p>
+    <div class="ix-tiles">
+      <div class="ix-tile"><p class="ix-tile-k">No aprobados</p><p class="ix-tile-v" data-draw="mt" data-mec="regalias" data-k="2" data-source="regalias">—</p></div>
+      <div class="ix-tile"><p class="ix-tile-k">Aprobados sin iniciar</p><p class="ix-tile-v" data-draw="mt" data-mec="regalias" data-k="3" data-source="regalias">—</p></div>
+      <div class="ix-tile"><p class="ix-tile-k">En ejecución</p><p class="ix-tile-v" data-draw="mt" data-mec="regalias" data-k="4" data-source="regalias">—</p></div>
+      <div class="ix-tile"><p class="ix-tile-k">Parados</p><p class="ix-tile-v" data-draw="mt" data-mec="regalias" data-k="5" data-source="regalias">—</p></div>
+      <div class="ix-tile"><p class="ix-tile-k">Terminados</p><p class="ix-tile-v" data-draw="mt" data-mec="regalias" data-k="6" data-source="regalias">—</p></div>
+    </div>
+    <div class="ix-grid">
+      <div class="ix-card"><h3>Por año y estado</h3><p class="ix-sub">Año de registro del BPIN. Clic para filtrar.</p><div class="ix-chart dash-skeleton" data-draw="m-anio" data-mec="regalias" data-source="regalias"></div></div>
+      <div class="ix-card"><h3>Por sector y estado</h3><p class="ix-sub">Clic en un sector para filtrar.</p><div class="ix-chart dash-skeleton" data-draw="m-grupo" data-mec="regalias" data-source="regalias"></div></div>
+      <div class="ix-card"><h3>Por qué están parados</h3><p class="ix-sub">Motivo de cada proyecto parado en la selección.</p><div class="ix-chart dash-skeleton" data-draw="m-motivo" data-mec="regalias" data-source="regalias"></div></div>
+      <div class="ix-card"><h3>Departamentos con más proyectos</h3><p class="ix-sub">Los doce primeros, por estado. Clic para filtrar.</p><div class="ix-chart dash-skeleton" data-draw="m-depto" data-mec="regalias" data-source="regalias"></div></div>
+    </div>
+    <div class="ix-card" id="tabla-regalias-card">
+      <h3>Proyectos</h3>
+      <div class="ix-tools"><span class="ix-sub">El nombre abre la ficha del proyecto en MapaInversiones.</span><span class="ix-count" data-draw="mcount" data-mec="regalias" data-source="regalias">—</span></div>
+      <div class="ix-tablewrap is-tall">
+        <table class="ix-table" id="tabla-regalias" data-source="regalias" data-row-key="codigo">
+          <thead><tr>
+            <th data-field="estado"><button type="button" class="ix-th" data-mec="regalias" data-sort="estado">Estado</button></th>
+            <th data-field="nombre"><button type="button" class="ix-th" data-mec="regalias" data-sort="nombre">Proyecto</button></th>
+            <th data-field="anio"><button type="button" class="ix-th" data-mec="regalias" data-sort="anio">Año</button></th>
+            <th data-field="entidad" class="ix-hide-n"><button type="button" class="ix-th" data-mec="regalias" data-sort="entidad">Entidad</button></th>
+            <th data-field="municipio" class="ix-hide-n"><button type="button" class="ix-th" data-mec="regalias" data-sort="municipio">Municipio</button></th>
+            <th data-field="valor_cop" class="ix-r"><button type="button" class="ix-th" data-mec="regalias" data-sort="valor_cop">Valor</button></th>
+            <th data-field="avance" class="ix-r ix-hide-n"><button type="button" class="ix-th" data-mec="regalias" data-sort="avance">Avance</button></th>
+            <th data-field="motivo" class="ix-hide-n">Detalle</th>
+          </tr></thead>
+          <tbody data-draw="mtabla" data-mec="regalias"></tbody>
+        </table>
+      </div>
+      <button type="button" class="ix-btn ix-more" data-mec="regalias" hidden>Mostrar 200 más</button>
+    </div>
+
+    <div class="ix-card" id="regalias-tramite-card">
+      <h3>Regalías en trámite</h3>
+      <p class="ix-sub">Proyectos en formulación, en proceso de viabilidad, viables o devueltos a la MGA. Muchos son borradores que no avanzan; el valor lo escribe quien formula.</p>
+      <div class="ix-tools">
+        <button type="button" class="ix-chip ix-vertramite" aria-pressed="false">Ver proyectos en trámite</button>
+      </div>
+      <div class="ix-tramite" hidden>
+        <div class="ix-filters" data-mec="tramite">
+          <label class="ix-field" for="tramite-anio">Año<select id="tramite-anio" data-draw="mf" data-mec="tramite" data-f="anio" data-source="regalias_tramite"></select></label>
+          <label class="ix-field" for="tramite-estado">Subestado<select id="tramite-estado" data-draw="mf" data-mec="tramite" data-f="estado_fuente" data-source="regalias_tramite"></select></label>
+          <label class="ix-field" for="tramite-depto">Departamento<select id="tramite-depto" data-draw="mf" data-mec="tramite" data-f="departamento" data-source="regalias_tramite"></select></label>
+          <label class="ix-field" for="tramite-grupo">Sector<select id="tramite-grupo" data-draw="mf" data-mec="tramite" data-f="sector" data-source="regalias_tramite"></select></label>
+          <label class="ix-field is-grow" for="tramite-q">Buscar<input type="search" id="tramite-q" class="ix-q" data-mec="tramite" placeholder="Proyecto, municipio, entidad o BPIN"></label>
+          <button type="button" class="ix-btn ix-mlimpiar" data-mec="tramite" hidden>Quitar filtros</button>
+        </div>
+        <p class="ix-sel">Selección: <b data-draw="msel" data-mec="tramite" data-k="n" data-source="regalias_tramite">—</b> proyectos por <b data-draw="msel" data-mec="tramite" data-k="v" data-source="regalias_tramite">—</b> de valor formulado</p>
+        <div class="ix-grid">
+          <div class="ix-card"><h3>Por subestado</h3><p class="ix-sub">Clic para filtrar.</p><div class="ix-chart dash-skeleton" data-draw="m-sub" data-mec="tramite" data-source="regalias_tramite"></div></div>
+          <div class="ix-card"><h3>Por año de registro</h3><p class="ix-sub">Clic para filtrar.</p><div class="ix-chart dash-skeleton" data-draw="m-anio" data-mec="tramite" data-source="regalias_tramite"></div></div>
+        </div>
+        <div class="ix-tools"><span class="ix-count" data-draw="mcount" data-mec="tramite" data-source="regalias_tramite">—</span></div>
+        <div class="ix-tablewrap is-tall">
+          <table class="ix-table" id="tabla-tramite" data-source="regalias_tramite" data-row-key="codigo">
+            <thead><tr>
+              <th data-field="estado_fuente"><button type="button" class="ix-th" data-mec="tramite" data-sort="estado_fuente">Subestado</button></th>
+              <th data-field="nombre"><button type="button" class="ix-th" data-mec="tramite" data-sort="nombre">Proyecto</button></th>
+              <th data-field="anio"><button type="button" class="ix-th" data-mec="tramite" data-sort="anio">Año</button></th>
+              <th data-field="entidad" class="ix-hide-n"><button type="button" class="ix-th" data-mec="tramite" data-sort="entidad">Entidad</button></th>
+              <th data-field="municipio" class="ix-hide-n"><button type="button" class="ix-th" data-mec="tramite" data-sort="municipio">Municipio</button></th>
+              <th data-field="valor_cop" class="ix-r"><button type="button" class="ix-th" data-mec="tramite" data-sort="valor_cop">Valor</button></th>
+            </tr></thead>
+            <tbody data-draw="mtabla" data-mec="tramite"></tbody>
+          </table>
+        </div>
+        <button type="button" class="ix-btn ix-more" data-mec="tramite" hidden>Mostrar 200 más</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= COCREA ======================= -->
+  <section class="ix-page" id="cocrea" data-page="cocrea" hidden>
+    <h2>CoCrea</h2>
+    <p class="ix-lede">Proyectos del registro público de CoCrea, convocatorias 2020 a 2026, con su estado: avalado, en ejecución o ejecutado. Un aval que siguió sin ejecución después de su vigencia cuenta como parado. Cada proyecto muestra su valor total y el valor solicitado a CoCrea, que es menor cuando el proyecto tiene otras fuentes de financiación.</p>
+    <div class="ix-filters" data-mec="cocrea">
+      <label class="ix-field" for="cocrea-anio">Convocatoria<select id="cocrea-anio" data-draw="mf" data-mec="cocrea" data-f="anio" data-source="cocrea"></select></label>
+      <label class="ix-field" for="cocrea-estado">Estado<select id="cocrea-estado" data-draw="mf" data-mec="cocrea" data-f="estado" data-source="cocrea"></select></label>
+      <label class="ix-field" for="cocrea-depto">Departamento<select id="cocrea-depto" data-draw="mf" data-mec="cocrea" data-f="departamento" data-source="cocrea"></select></label>
+      <label class="ix-field" for="cocrea-grupo">Modalidad<select id="cocrea-grupo" data-draw="mf" data-mec="cocrea" data-f="estado_fuente" data-source="cocrea"></select></label>
+      <label class="ix-field is-grow" for="cocrea-q">Buscar<input type="search" id="cocrea-q" class="ix-q" data-mec="cocrea" placeholder="Proyecto, proponente o código"></label>
+      <button type="button" class="ix-btn ix-mlimpiar" data-mec="cocrea" hidden>Quitar filtros</button>
+    </div>
+    <p class="ix-sel">Selección: <b data-draw="msel" data-mec="cocrea" data-k="n" data-source="cocrea">—</b> proyectos por <b data-draw="msel" data-mec="cocrea" data-k="v" data-source="cocrea">—</b>, de los que se solicitan a CoCrea <b data-draw="msel" data-mec="cocrea" data-k="s" data-source="cocrea">—</b></p>
+    <div class="ix-tiles">
+      <div class="ix-tile"><p class="ix-tile-k">Avalados sin iniciar</p><p class="ix-tile-v" data-draw="mt" data-mec="cocrea" data-k="3" data-source="cocrea">—</p></div>
+      <div class="ix-tile"><p class="ix-tile-k">En ejecución</p><p class="ix-tile-v" data-draw="mt" data-mec="cocrea" data-k="4" data-source="cocrea">—</p></div>
+      <div class="ix-tile"><p class="ix-tile-k">Parados (aval vencido)</p><p class="ix-tile-v" data-draw="mt" data-mec="cocrea" data-k="5" data-source="cocrea">—</p></div>
+      <div class="ix-tile"><p class="ix-tile-k">Ejecutados</p><p class="ix-tile-v" data-draw="mt" data-mec="cocrea" data-k="6" data-source="cocrea">—</p></div>
+    </div>
+    <div class="ix-grid">
+      <div class="ix-card"><h3>Por convocatoria y estado</h3><p class="ix-sub">Clic en una convocatoria para filtrar.</p><div class="ix-chart dash-skeleton" data-draw="m-anio" data-mec="cocrea" data-source="cocrea"></div></div>
+      <div class="ix-card"><h3>Por modalidad y estado</h3><p class="ix-sub">PAI, PAP y PAT. Clic para filtrar.</p><div class="ix-chart dash-skeleton" data-draw="m-grupo" data-mec="cocrea" data-source="cocrea"></div></div>
+      <div class="ix-card"><h3>Departamentos con más proyectos</h3><p class="ix-sub">Los doce primeros, por estado. Clic para filtrar.</p><div class="ix-chart dash-skeleton" data-draw="m-depto" data-mec="cocrea" data-source="cocrea"></div></div>
+      <div class="ix-card"><h3>Proyectos en municipios PDET o ZOMAC</h3><p class="ix-sub">Por tipo de territorio, según el municipio del proyecto.</p><div class="ix-chart dash-skeleton" data-draw="m-foco" data-mec="cocrea" data-source="cocrea"></div></div>
+    </div>
+    <div class="ix-card" id="tabla-cocrea-card">
+      <h3>Proyectos</h3>
+      <div class="ix-tools"><span class="ix-sub">El nombre abre la ficha del proyecto en colombiacrea.org.</span><span class="ix-count" data-draw="mcount" data-mec="cocrea" data-source="cocrea">—</span></div>
+      <div class="ix-tablewrap is-tall">
+        <table class="ix-table" id="tabla-cocrea" data-source="cocrea" data-row-key="codigo">
+          <thead><tr>
+            <th data-field="estado"><button type="button" class="ix-th" data-mec="cocrea" data-sort="estado">Estado</button></th>
+            <th data-field="codigo" class="ix-hide-n"><button type="button" class="ix-th" data-mec="cocrea" data-sort="codigo">Código</button></th>
+            <th data-field="nombre"><button type="button" class="ix-th" data-mec="cocrea" data-sort="nombre">Proyecto</button></th>
+            <th data-field="anio"><button type="button" class="ix-th" data-mec="cocrea" data-sort="anio">Convocatoria</button></th>
+            <th data-field="entidad" class="ix-hide-n"><button type="button" class="ix-th" data-mec="cocrea" data-sort="entidad">Proponente</button></th>
+            <th data-field="municipio" class="ix-hide-n"><button type="button" class="ix-th" data-mec="cocrea" data-sort="municipio">Municipio</button></th>
+            <th data-field="valor_cop" class="ix-r"><button type="button" class="ix-th" data-mec="cocrea" data-sort="valor_cop">Valor del proyecto</button></th>
+            <th data-field="valor_solicitado_cop" class="ix-r"><button type="button" class="ix-th" data-mec="cocrea" data-sort="valor_solicitado_cop">Valor solicitado</button></th>
+            <th data-field="estado_fuente" class="ix-hide-n">Modalidad</th>
+          </tr></thead>
+          <tbody data-draw="mtabla" data-mec="cocrea"></tbody>
+        </table>
+      </div>
+      <button type="button" class="ix-btn ix-more" data-mec="cocrea" hidden>Mostrar 200 más</button>
+    </div>
+  </section>
+
+  <!-- ======================= MÉTODO ======================= -->
+  <section class="ix-page" id="metodo" data-page="metodo" hidden>
+    <h2>Método y fuentes</h2>
+    <p class="ix-lede">Cada fuente usa sus propios estados. Para compararlas, cada proyecto recibe uno de siete estados comunes, en el orden del ciclo.</p>
+    <ol class="ix-estados">
+      <li><strong><span class="ix-sw" data-estado-color="1"></span>En trámite</strong>OxI: listado de trámite de la ART, incluidos los devueltos. Regalías: formulación, en proceso de viabilidad, viable o devuelto a la MGA. CoCrea: los postulados solo se publican como totales.</li>
+      <li><strong><span class="ix-sw" data-estado-color="2"></span>No aprobado</strong>Regalías: desaprobado, no aprobado o no viable.</li>
+      <li><strong><span class="ix-sw" data-estado-color="3"></span>Aprobado sin iniciar</strong>Regalías: aprobado, sin contratar, en contratación o contratado sin acta de inicio, con plazo vigente. CoCrea: avalado con el aval vigente (convocatoria 2026, y PAI 2025).</li>
+      <li><strong><span class="ix-sw" data-estado-color="4"></span>En ejecución</strong>En ejecución según el DNP o CoCrea, sin señales de estar parado. Se marca si su plazo ya venció.</li>
+      <li><strong><span class="ix-sw" data-estado-color="5"></span>Parado</strong>Inactivo en el SUIFP, o plazo vencido sin avance físico reportado, o aprobado sin iniciar con el plazo vencido. En CoCrea: aval vencido sin ejecución.</li>
+      <li><strong><span class="ix-sw" data-estado-color="6"></span>Terminado</strong>OxI: avance físico de 99 % o más. Regalías: terminado, cerrado o para cierre, o avance de 99 % o más. CoCrea: ejecutado.</li>
+      <li><strong><span class="ix-sw" data-estado-color="7"></span>Sin información</strong>OxI: proyectos que siguen como viables en el SUIFP sin seguimiento de obra, o sin ficha en el DNP.</li>
+    </ol>
+    <ul class="ix-notes">
+      <li><b>Territorios:</b> <span data-draw="kv" data-source="territorios" data-field="total" data-row="0">—</span> municipios: <span data-draw="kv" data-source="territorios" data-field="zomac" data-row="0">—</span> ZOMAC (Decreto 1650 de 2017) y <span data-draw="kv" data-source="territorios" data-field="pdet" data-row="0">—</span> PDET (datos.gov.co), de los cuales <span data-draw="kv" data-source="territorios" data-field="ambos" data-row="0">—</span> son ambas cosas.</li>
+      <li><b>Obras por Impuestos:</b> base de resultados y listado de trámite de la Agencia de Renovación del Territorio; estado y avance físico de cada BPIN en MapaInversiones del DNP (corte 1 de noviembre de 2026).</li>
+      <li><b>Regalías:</b> conjuntos DNP-proyectos_datos_basicos (estado y subestado), DNP-ProyectosSGR (avance físico) y DNP-LocalizacionProyecto (municipios) en datos.gov.co. Un BPIN repetido conserva su registro más avanzado. Los proyectos de varios municipios cuentan una vez, en su primer departamento o como "Varios departamentos".</li>
+      <li><b>Valores atípicos:</b> los proyectos de regalías que declaran más de un billón de pesos, casi todos borradores en formulación, no se suman y aparecen como "Atípico".</li>
+      <li><b>CoCrea:</b> registro público de proyectos de colombiacrea.org, convocatorias 2020 a 2026. Cada proyecto trae su valor total (budget) y el valor solicitado a CoCrea (requested_budget); los proyectos de las primeras convocatorias no publican ninguno de los dos. La vigencia del aval sigue la Guía de vinculación y los términos de cada convocatoria; un aval de 2020 a 2024, o PAP y PAT de 2025, que sigue sin ejecución cuenta como parado.</li>
+      <li><b>Límites:</b> "parado" es una alerta para revisar, no una prueba de incumplimiento: un plazo puede haberse ampliado sin actualizarse, y en OxI fiducia el avance no siempre se carga en el DNP. Los años no significan lo mismo en las tres fuentes (aprobación, registro del BPIN, convocatoria).</li>
+    </ul>
+  </section>
+</div>
+
+<script>
+(function () {
+  const nf = (d) => new Intl.NumberFormat('es-CO', { maximumFractionDigits: d });
+  const cop = (v) => (v == null || isNaN(v)) ? '—' : Math.abs(v) >= 1e12 ? '$' + nf(2).format(v / 1e12) + ' billones' : Math.abs(v) >= 1e9 ? '$' + nf(1).format(v / 1e9) + ' mil millones' : '$' + nf(0).format(v / 1e6) + ' millones';
+  const copCorto = (v) => Math.abs(v) >= 1e12 ? '$' + nf(2).format(v / 1e12) + ' bill.' : Math.abs(v) >= 1e9 ? '$' + nf(0).format(v / 1e9) + ' mil M' : '$' + nf(0).format(v / 1e6) + ' M';
+  const num = (v) => (v == null || isNaN(v)) ? '—' : nf(0).format(v);
+  // Valor completo en pesos, para cada proyecto: $19.723.456.789
+  const copCompleto = (v) => (v == null || isNaN(v)) ? '—' : '$' + nf(0).format(Math.round(v));
+  const pct = (v) => (v == null || isNaN(v)) ? '—' : nf(0).format(v * 100) + ' %';
+  const ESTADOS = ['En trámite', 'No aprobado', 'Aprobado sin iniciar', 'En ejecución', 'Parado', 'Terminado', 'Sin información'];
+  const ordenEstado = (e) => ESTADOS.indexOf(e) + 1;
+  // Escala de azules definida en el CSS (--ix-e1 … --ix-e7 y un color por mecanismo)
+  const estadoColor = (o) => (o >= 1 && o <= 7 ? 'var(--ix-e' + o + ')' : 'var(--cds-chart-muted)');
+  const mecColor = (m) => ({ 'OxI': 'var(--ix-oxi)', 'Regalías': 'var(--ix-regalias)', 'CoCrea': 'var(--ix-cocrea)' })[m] || 'var(--cds-chart-muted)';
+
+  function pick(rows, el) {
+    if (el.dataset.where) {
+      const conds = el.dataset.where.split('&').filter(Boolean).map((p) => p.split('=').map(decodeURIComponent));
+      return rows.find((r) => conds.every(([k, v]) => String(r[k]) === v));
+    }
+    return rows[Number(el.dataset.row || 0)];
+  }
+  function ready(el, d, isChart) {
+    el.classList.toggle('dash-skeleton', d.status === 'loading' || d.status === 'missing');
+    if (d.status === 'ok') return true;
+    el.replaceChildren();
+    if (d.status === 'error' || d.status === 'connect' || d.status === 'declined') {
+      const f = document.createElement('span');
+      f.className = 'ix-fail is-bad';
+      f.textContent = 'No se pudo cargar';
+      el.append(f);
+    } else if (!isChart) el.textContent = '—';
+    return false;
+  }
+  function empty(el, msg) {
+    el.replaceChildren();
+    const f = document.createElement('span');
+    f.className = 'ix-fail';
+    f.textContent = msg;
+    el.append(f);
+  }
+  function makeTip(el) {
+    const tip = document.createElement('div');
+    tip.className = 'ix-tip';
+    tip.hidden = true;
+    el.append(tip);
+    return {
+      show(event, head, lines) {
+        const h = document.createElement('span');
+        h.className = 'ix-tip-h';
+        h.textContent = head;
+        tip.replaceChildren(h, ...lines.map((t) => { const s = document.createElement('span'); s.textContent = t; return s; }));
+        tip.hidden = false;
+        const box = el.getBoundingClientRect();
+        let x = event.clientX - box.left + 12, y = event.clientY - box.top - tip.offsetHeight - 8;
+        if (x + tip.offsetWidth > box.width) x = Math.max(0, box.width - tip.offsetWidth);
+        if (y < 0) y = event.clientY - box.top + 14;
+        tip.style.left = x + 'px';
+        tip.style.top = y + 'px';
+      },
+      hide() { tip.hidden = true; },
+    };
+  }
+  function fit(sel, maxW) {
+    const node = sel.node();
+    let s = node.textContent;
+    while (s.length > 4 && node.getComputedTextLength() > maxW) { s = s.slice(0, -2); node.textContent = s.trimEnd() + '…'; }
+  }
+  // Barras horizontales apiladas: etiqueta arriba, barra debajo, valor al final.
+  function hbar(el, rows, o) {
+    el.replaceChildren();
+    const W = Math.max(240, Math.floor(el.clientWidth));
+    const rowH = 42, top = 2;
+    const H = rows.length * rowH + top;
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', o.aria || '');
+    const probe = svg.append('text').attr('class', 'ix-bval');
+    let valW = 0;
+    rows.forEach((d) => { probe.text(o.text(d)); valW = Math.max(valW, probe.node().getComputedTextLength()); });
+    probe.remove();
+    const max = o.max || d3.max(rows, (d) => d3.sum(o.segs(d), (s) => s.v)) || 1;
+    const x = d3.scaleLinear([0, max], [0, Math.max(40, W - valW - 10)]);
+    const tip = makeTip(el);
+    svg.selectAll('g.ix-row').data(rows).join('g').attr('class', 'ix-row').attr('transform', (d, i) => `translate(0,${top + i * rowH})`)
+      .each(function (d) {
+        const row = d3.select(this);
+        fit(row.append('text').attr('class', 'ix-blabel').attr('x', 0).attr('y', 13).text(o.label(d)), W);
+        let acc = 0;
+        o.segs(d).forEach((s) => {
+          if (!s.v) return;
+          row.append('rect').attr('x', x(acc)).attr('y', 19).attr('height', 15).attr('rx', 2).attr('width', Math.max(1.5, x(acc + s.v) - x(acc))).style('fill', s.color);
+          acc += s.v;
+        });
+        row.append('text').attr('class', 'ix-bval').attr('x', x(acc) + 8).attr('y', 31).text(o.text(d));
+        const hit = row.append('rect').attr('class', 'ix-hit' + (o.onClick ? ' is-click' : '')).attr('x', 0).attr('y', 0).attr('width', W).attr('height', rowH)
+          .on('mousemove', (event) => tip.show(event, o.label(d), o.tip(d)))
+          .on('mouseleave', () => tip.hide());
+        if (o.onClick) hit.on('click', () => o.onClick(d));
+      });
+  }
+  // Barras verticales apiladas por estado, una por año.
+  function vstack(el, rows, o) {
+    const W = Math.max(260, Math.floor(el.clientWidth)), H = o.height || 170;
+    const m = { t: 16, r: 4, b: 20, l: 0 };
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H + (o.title ? 18 : 0)}`).attr('role', 'img').attr('aria-label', o.aria || '');
+    const g = svg.append('g').attr('transform', `translate(0,${o.title ? 18 : 0})`);
+    if (o.title) svg.append('text').attr('class', 'ix-blabel').attr('x', 0).attr('y', 12).style('font-weight', '600').text(o.title);
+    const max = d3.max(rows, (r) => d3.sum(r.segs, (s) => s.v)) || 1;
+    const y = d3.scaleLinear([0, max], [H - m.b, m.t]).nice();
+    const ticks = y.ticks(3);
+    const probe = g.append('text').attr('class', 'ix-tick');
+    ticks.forEach((t) => { probe.text(num(t)); m.l = Math.max(m.l, probe.node().getComputedTextLength()); });
+    probe.remove();
+    m.l += 8;
+    const x = d3.scaleBand(rows.map((r) => r.k), [m.l, W - m.r]).padding(0.25);
+    ticks.forEach((t) => {
+      g.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(t)).attr('y2', y(t)).style('stroke', t === 0 ? 'var(--cds-chart-axis)' : 'var(--cds-chart-grid)');
+      g.append('text').attr('class', 'ix-tick').attr('x', m.l - 6).attr('y', y(t) + 4).attr('text-anchor', 'end').text(num(t));
+    });
+    const tip = makeTip(el);
+    rows.forEach((r) => {
+      let acc = 0;
+      r.segs.forEach((s) => {
+        if (!s.v) return;
+        g.append('rect').attr('x', x(r.k)).attr('width', x.bandwidth()).attr('y', y(acc + s.v)).attr('height', Math.max(0, y(acc) - y(acc + s.v))).style('fill', s.color);
+        acc += s.v;
+      });
+      if (x.bandwidth() >= 20) g.append('text').attr('class', 'ix-bval').attr('x', x(r.k) + x.bandwidth() / 2).attr('y', y(acc) - 4).attr('text-anchor', 'middle').text(num(acc));
+      g.append('text').attr('class', 'ix-tick').attr('x', x(r.k) + x.bandwidth() / 2).attr('y', H - 5).attr('text-anchor', 'middle').text(r.k);
+      g.append('rect').attr('class', 'ix-hit' + (o.onClick ? ' is-click' : '')).attr('x', x(r.k) - (x.step() - x.bandwidth()) / 2).attr('y', m.t).attr('width', x.step()).attr('height', H - m.t - m.b)
+        .on('mousemove', (event) => tip.show(event, (o.title ? o.title + ' · ' : '') + r.k, r.segs.filter((s) => s.v).map((s) => s.name + ': ' + num(s.v))))
+        .on('mouseleave', () => tip.hide())
+        .on('click', () => o.onClick && o.onClick(r));
+    });
+  }
+  window.ix = { cop, copCorto, copCompleto, num, pct, ESTADOS, ordenEstado, estadoColor, mecColor, pick, ready, empty, hbar, vstack };
+})();
+</script>
+
+<script>
+// Cálculos sobre el resumen agregado
+dash.calc('totales', {
+  inputs: ['resumen'],
+  title: 'Totales por mecanismo',
+  description: 'Proyectos, valor y proyectos por estado de cada mecanismo y del total, de 2020 a 2026.',
+  fn: (resumen) => {
+    const grupos = ['OxI', 'Regalías', 'CoCrea', 'Total'];
+    return grupos.map((m) => {
+      const rs = resumen.filter((r) => m === 'Total' || r.mecanismo === m);
+      const n = (o) => rs.filter((r) => Number(r.estado_orden) === o).reduce((a, r) => a + Number(r.proyectos), 0);
+      const proyectos = rs.reduce((a, r) => a + Number(r.proyectos), 0);
+      const aprobados = proyectos - n(1) - n(2);
+      return { mecanismo: m, proyectos, valor: rs.reduce((a, r) => a + Number(r.valor_cop), 0), aprobados,
+        terminados: n(6), en_ejecucion: n(4), parados: n(5), tramite: n(1), pct_parados: aprobados ? n(5) / aprobados : 0 };
+    });
+  },
+});
+dash.calc('territorios', {
+  inputs: ['municipios'],
+  title: 'Municipios PDET y ZOMAC',
+  description: 'Cuántos municipios son ZOMAC, PDET o ambas cosas.',
+  fn: (municipios) => [{
+    total: municipios.length,
+    zomac: municipios.filter((m) => m.zomac === true).length,
+    pdet: municipios.filter((m) => m.pdet === true).length,
+    ambos: municipios.filter((m) => m.pdet === true && m.zomac === true).length,
+  }],
+});
+
+dash.draw('kv', (el) => {
+  const d = dash.data(el.dataset.source);
+  if (!ix.ready(el, d, false)) return;
+  const r = ix.pick(d.data, el);
+  el.textContent = r ? ix.num(Number(r[el.dataset.field])) : '—';
+});
+dash.draw('peor', (el) => {
+  const d = dash.data('totales');
+  if (!ix.ready(el, d, false)) return;
+  const r = d.data.filter((x) => x.mecanismo !== 'Total').sort((a, b) => b.pct_parados - a.pct_parados)[0];
+  el.textContent = r ? r.mecanismo + ' (' + ix.pct(r.pct_parados) + ' de sus aprobados)' : '—';
+});
+
+// --- Pestañas ---
+window.ixTab = 'comparado';
+const ixTabs = ['comparado', 'oxi', 'regalias', 'cocrea', 'metodo'];
+function ixMostrar(tab) {
+  if (!ixTabs.includes(tab)) tab = 'comparado';
+  window.ixTab = tab;
+  document.querySelectorAll('.ix-tab').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.tab === tab)));
+  document.querySelectorAll('.ix-page').forEach((s) => { s.hidden = s.dataset.page !== tab; });
+}
+document.querySelectorAll('.ix-tab').forEach((b) => b.addEventListener('click', () => { ixMostrar(b.dataset.tab); dash.setLink(b.dataset.tab); }));
+ixMostrar(location.hash.slice(1));
+
+// Colores de las leyendas
+document.querySelectorAll('.ix-sw[data-estado-color]').forEach((s) => { s.style.background = ix.estadoColor(Number(s.dataset.estadoColor)); });
+document.querySelectorAll('.ix-sw[data-mec-color]').forEach((s) => { s.style.background = ix.mecColor(s.dataset.mecColor); });
+</script>
+
+<script>
+// ======================= Vista comparada =======================
+window.ixC = { anio: '', foco: '', depto: '' };
+const ixCDraws = ['cf-anio', 'cf-depto', 'cv', 'cmini', 'c-estado', 'c-anio', 'c-parados', 'c-sector', 'c-tabla'];
+const ixCRedraw = () => {
+  document.querySelectorAll('.ix-climpiar').forEach((b) => { b.hidden = !(window.ixC.anio || window.ixC.foco || window.ixC.depto); });
+  ixCDraws.forEach((n) => dash.draw(n));
+};
+const ixCFiltrar = (rows, salvo) => rows.filter((r) => (salvo === 'anio' || !window.ixC.anio || String(r.anio) === window.ixC.anio)
+  && (!window.ixC.foco || (window.ixC.foco === 'foco' ? r.foco !== 'Fuera de PDET/ZOMAC' : r.foco === 'Fuera de PDET/ZOMAC'))
+  && (salvo === 'depto' || !window.ixC.depto || r.departamento === window.ixC.depto));
+document.querySelectorAll('.ix-cfoco').forEach((s) => s.addEventListener('change', () => { window.ixC.foco = s.value; ixCRedraw(); }));
+document.querySelectorAll('.ix-climpiar').forEach((b) => b.addEventListener('click', () => {
+  Object.assign(window.ixC, { anio: '', foco: '', depto: '' });
+  document.querySelectorAll('.ix-cfoco').forEach((s) => { s.value = ''; });
+  ixCRedraw();
+}));
+dash.draw('cf-anio', (sel) => {
+  const d = dash.data('resumen');
+  const vals = d.status === 'ok' ? [...new Set(d.data.map((r) => String(r.anio)))].sort() : [];
+  sel.replaceChildren(new Option('2020–2026', ''), ...vals.map((v) => new Option(v, v)));
+  sel.value = window.ixC.anio;
+  sel.onchange = () => { window.ixC.anio = sel.value; ixCRedraw(); };
+});
+dash.draw('cf-depto', (sel) => {
+  const d = dash.data('resumen');
+  const vals = d.status === 'ok' ? [...new Set(d.data.map((r) => r.departamento))].sort((a, b) => a.localeCompare(b, 'es')) : [];
+  sel.replaceChildren(new Option('Todos', ''), ...vals.map((v) => new Option(v, v)));
+  sel.value = window.ixC.depto;
+  sel.onchange = () => { window.ixC.depto = sel.value; ixCRedraw(); };
+});
+const ixMecAgg = (rows, m) => {
+  const rs = rows.filter((r) => r.mecanismo === m);
+  const e = [0, 0, 0, 0, 0, 0, 0, 0];
+  rs.forEach((r) => { e[Number(r.estado_orden)] += Number(r.proyectos); });
+  const proyectos = d3.sum(e);
+  const aprob = proyectos - e[1] - e[2];
+  // Valor aprobado: sin los proyectos en trámite ni los no aprobados (sus valores son formulados, no aprobados)
+  const aprobados = rs.filter((r) => Number(r.estado_orden) > 2);
+  return { proyectos, valor: d3.sum(aprobados, (r) => Number(r.valor_cop)), solicitado: d3.sum(aprobados, (r) => Number(r.valor_solicitado_cop || 0)), e, pparado: aprob ? e[5] / aprob : NaN };
+};
+dash.draw('cv', (el) => {
+  const d = dash.data('resumen');
+  if (!ix.ready(el, d, false)) return;
+  const a = ixMecAgg(ixCFiltrar(d.data), el.dataset.mec);
+  const k = el.dataset.k;
+  el.textContent = k === 'proyectos' ? ix.num(a.proyectos) : k === 'valor' ? ix.cop(a.valor) : k === 'solicitado' ? ix.cop(a.solicitado) : k === 'pparado' ? ix.pct(a.pparado) : ix.num(a.e[Number(k.slice(1))]);
+});
+dash.draw('cmini', (el) => {
+  const d = dash.data('resumen');
+  el.replaceChildren();
+  if (d.status !== 'ok') return;
+  const a = ixMecAgg(ixCFiltrar(d.data), el.dataset.mec);
+  for (let o = 1; o <= 7; o += 1) {
+    if (!a.e[o]) continue;
+    const s = document.createElement('span');
+    s.style.width = (100 * a.e[o] / a.proyectos) + '%';
+    s.style.background = ix.estadoColor(o);
+    el.append(s);
+  }
+});
+dash.draw('c-estado', (el) => {
+  const d = dash.data('resumen');
+  if (!ix.ready(el, d, true)) return;
+  const f = ixCFiltrar(d.data);
+  const rows = ['OxI', 'Regalías', 'CoCrea'].map((m) => ({ m, ...ixMecAgg(f, m) })).filter((r) => r.proyectos);
+  if (!rows.length) return ix.empty(el, 'Ningún proyecto coincide con los filtros');
+  ix.hbar(el, rows, {
+    aria: 'Estado de los proyectos por mecanismo', max: 1,
+    label: (r) => r.m + ' · ' + ix.num(r.proyectos) + ' proyectos',
+    segs: (r) => [1, 2, 3, 4, 5, 6, 7].map((o) => ({ v: r.e[o] / r.proyectos, color: ix.estadoColor(o) })),
+    text: (r) => ix.pct(r.e[5] / r.proyectos) + ' parados',
+    tip: (r) => [1, 2, 3, 4, 5, 6, 7].filter((o) => r.e[o]).map((o) => ix.ESTADOS[o - 1] + ': ' + ix.num(r.e[o]) + ' (' + ix.pct(r.e[o] / r.proyectos) + ')'),
+  });
+});
+dash.draw('c-anio', (el) => {
+  const d = dash.data('resumen');
+  if (!ix.ready(el, d, true)) return;
+  el.replaceChildren();
+  const f = ixCFiltrar(d.data, 'anio');
+  let alguno = false;
+  ['OxI', 'Regalías', 'CoCrea'].forEach((m) => {
+    const rs = f.filter((r) => r.mecanismo === m);
+    if (!rs.length) return;
+    alguno = true;
+    const anios = [...new Set(rs.map((r) => String(r.anio)))].sort();
+    const rows = anios.map((k) => ({ k, segs: [1, 2, 3, 4, 5, 6, 7].map((o) => ({ name: ix.ESTADOS[o - 1], color: ix.estadoColor(o),
+      v: d3.sum(rs.filter((r) => String(r.anio) === k && Number(r.estado_orden) === o), (r) => Number(r.proyectos)) })) }));
+    ix.vstack(el, rows, { title: m, aria: m + ': proyectos por año y estado', height: 150,
+      onClick: (r) => { window.ixC.anio = window.ixC.anio === r.k ? '' : r.k; ixCRedraw(); } });
+  });
+  if (!alguno) ix.empty(el, 'Ningún proyecto coincide con los filtros');
+});
+dash.draw('c-parados', (el) => {
+  const d = dash.data('resumen');
+  if (!ix.ready(el, d, true)) return;
+  const f = ixCFiltrar(d.data, 'depto').filter((r) => Number(r.estado_orden) === 5);
+  const rows = d3.rollups(f, (v) => ['OxI', 'Regalías', 'CoCrea'].map((m) => d3.sum(v.filter((r) => r.mecanismo === m), (r) => Number(r.proyectos))), (r) => r.departamento)
+    .map(([k, v]) => ({ k, v, t: d3.sum(v) })).sort((a, b) => b.t - a.t).slice(0, 12);
+  if (!rows.length) return ix.empty(el, 'Ningún proyecto parado en la selección');
+  ix.hbar(el, rows, {
+    aria: 'Departamentos con más proyectos parados',
+    label: (r) => r.k,
+    segs: (r) => ['OxI', 'Regalías', 'CoCrea'].map((m, i) => ({ v: r.v[i], color: (!window.ixC.depto || window.ixC.depto === r.k) ? ix.mecColor(m) : 'var(--cds-chart-muted)' })),
+    text: (r) => ix.num(r.t),
+    tip: (r) => ['OxI: ' + ix.num(r.v[0]), 'Regalías: ' + ix.num(r.v[1]), 'CoCrea: ' + ix.num(r.v[2])],
+    onClick: (r) => { window.ixC.depto = window.ixC.depto === r.k ? '' : r.k; ixCRedraw(); },
+  });
+});
+dash.draw('c-sector', (el) => {
+  const d = dash.data('resumen');
+  if (!ix.ready(el, d, true)) return;
+  const f = ixCFiltrar(d.data).filter((r) => Number(r.estado_orden) > 2);
+  const rows = d3.rollups(f, (v) => ({ por: [3, 4, 5, 6, 7].map((o) => ({ o, n: d3.sum(v.filter((r) => Number(r.estado_orden) === o), (r) => Number(r.proyectos)) })), mec: ['OxI', 'Regalías', 'CoCrea'].map((m) => d3.sum(v.filter((r) => r.mecanismo === m), (r) => Number(r.proyectos))) }), (r) => r.sector)
+    .map(([k, a]) => ({ k, ...a, t: d3.sum(a.por, (s) => s.n) })).sort((a, b) => b.t - a.t);
+  if (!rows.length) return ix.empty(el, 'Ningún proyecto aprobado en la selección');
+  ix.hbar(el, rows, {
+    aria: 'Proyectos aprobados por sector',
+    label: (r) => r.k,
+    segs: (r) => r.por.map((s) => ({ v: s.n, color: ix.estadoColor(s.o) })),
+    text: (r) => ix.num(r.t),
+    tip: (r) => r.por.filter((s) => s.n).map((s) => ix.ESTADOS[s.o - 1] + ': ' + ix.num(s.n)).concat(['OxI ' + ix.num(r.mec[0]) + ' · Regalías ' + ix.num(r.mec[1]) + ' · CoCrea ' + ix.num(r.mec[2])]),
+  });
+});
+dash.draw('c-tabla', (tbody) => {
+  const d = dash.data('resumen');
+  tbody.replaceChildren();
+  if (d.status !== 'ok') return;
+  const f = ixCFiltrar(d.data);
+  const rows = d3.rollups(f, (v) => {
+    const c = (m, par) => d3.sum(v.filter((r) => r.mecanismo === m && (!par || Number(r.estado_orden) === 5)), (r) => Number(r.proyectos));
+    return { oxi: c('OxI'), oxp: c('OxI', 1), sgr: c('Regalías'), sgp: c('Regalías', 1), cc: c('CoCrea'), ccp: c('CoCrea', 1), valor: d3.sum(v.filter((r) => Number(r.estado_orden) > 2), (r) => Number(r.valor_cop)) };
+  }, (r) => r.departamento).map(([k, a]) => ({ k, ...a })).sort((a, b) => (b.oxp + b.sgp + b.ccp) - (a.oxp + a.sgp + a.ccp));
+  const td = (t, cls) => { const c = document.createElement('td'); if (cls) c.className = cls; c.textContent = t; return c; };
+  rows.forEach((r) => {
+    const tr = document.createElement('tr');
+    tr.append(td(r.k, 'ix-strong'), td(ix.num(r.oxi), 'ix-num ix-r'), td(ix.num(r.oxp), 'ix-num ix-r'), td(ix.num(r.sgr), 'ix-num ix-r'), td(ix.num(r.sgp), 'ix-num ix-r'),
+      td(ix.num(r.cc), 'ix-num ix-r'), td(ix.num(r.ccp), 'ix-num ix-r'), td(ix.cop(r.valor), 'ix-num ix-r ix-hide-n'));
+    tbody.append(tr);
+  });
+});
+</script>
+
+<script>
+// ======================= Pestañas por mecanismo =======================
+// Cada bloque (oxi, regalias, tramite, cocrea) lee su propia fuente y tiene sus propios filtros.
+const IX_DS = { oxi: 'oxi', regalias: 'regalias', tramite: 'regalias_tramite', cocrea: 'cocrea' };
+const IX_GRUPO = { oxi: 'entidad', regalias: 'sector', tramite: 'sector', cocrea: 'estado_fuente' };
+const IX_FICHA = { oxi: 'dnp', regalias: 'dnp', tramite: 'dnp', cocrea: 'cocrea' };
+window.ixM = {};
+Object.keys(IX_DS).forEach((k) => { window.ixM[k] = { anio: '', estado: '', departamento: '', sector: '', entidad: '', estado_fuente: '', q: '', sort: 'valor_cop', dir: -1, n: 200 }; });
+const IX_CAMPOS_F = ['anio', 'estado', 'departamento', 'sector', 'entidad', 'estado_fuente'];
+const ixMDraws = ['mf', 'msel', 'mt', 'm-anio', 'm-grupo', 'm-motivo', 'm-depto', 'm-foco', 'm-sub', 'mcount', 'mtabla'];
+const ixMRedraw = (k) => {
+  const s = window.ixM[k];
+  document.querySelectorAll('.ix-mlimpiar[data-mec="' + k + '"]').forEach((b) => { b.hidden = !(IX_CAMPOS_F.some((f) => s[f]) || s.q); });
+  ixMDraws.forEach((n) => dash.draw(n));
+};
+const ixMSet = (k, campo, v) => { const s = window.ixM[k]; s[campo] = s[campo] === v ? '' : v; s.n = 200; ixMRedraw(k); };
+const ixMFiltrar = (k, rows, salvo) => {
+  const s = window.ixM[k];
+  const q = s.q.trim().toLowerCase();
+  return rows.filter((p) => IX_CAMPOS_F.every((f) => f === salvo || !s[f] || String(p[f]) === s[f])
+    && (!q || (p.nombre + ' ' + p.municipio + ' ' + p.entidad + ' ' + p.codigo + ' ' + p.departamento).toLowerCase().includes(q)));
+};
+const ixMData = (el) => dash.data(IX_DS[el.dataset.mec]);
+
+document.querySelectorAll('.ix-q').forEach((i) => i.addEventListener('input', () => { const s = window.ixM[i.dataset.mec]; s.q = i.value; s.n = 200; ixMRedraw(i.dataset.mec); }));
+document.querySelectorAll('.ix-mlimpiar').forEach((b) => b.addEventListener('click', () => {
+  const s = window.ixM[b.dataset.mec];
+  IX_CAMPOS_F.forEach((f) => { s[f] = ''; });
+  s.q = ''; s.n = 200;
+  document.querySelectorAll('.ix-q[data-mec="' + b.dataset.mec + '"]').forEach((i) => { i.value = ''; });
+  ixMRedraw(b.dataset.mec);
+}));
+document.querySelectorAll('.ix-more').forEach((b) => b.addEventListener('click', () => { window.ixM[b.dataset.mec].n += 200; dash.draw('mtabla'); dash.draw('mcount'); }));
+document.querySelectorAll('.ix-th').forEach((b) => b.addEventListener('click', () => {
+  const k = b.dataset.mec, c = b.dataset.sort, s = window.ixM[k];
+  s.dir = s.sort === c ? -s.dir : (['valor_cop', 'valor_solicitado_cop', 'anio', 'avance'].includes(c) ? -1 : 1);
+  s.sort = c;
+  b.closest('table').querySelectorAll('th').forEach((th) => {
+    const own = th.querySelector('.ix-th');
+    if (own && own.dataset.sort === c) th.setAttribute('aria-sort', s.dir < 0 ? 'descending' : 'ascending');
+    else th.removeAttribute('aria-sort');
+  });
+  dash.draw('mtabla');
+}));
+document.querySelectorAll('.ix-vertramite').forEach((b) => b.addEventListener('click', () => {
+  const ver = b.getAttribute('aria-pressed') !== 'true';
+  b.setAttribute('aria-pressed', String(ver));
+  document.querySelectorAll('.ix-tramite').forEach((t) => { t.hidden = !ver; });
+}));
+
+dash.draw('mf', (sel) => {
+  const k = sel.dataset.mec, f = sel.dataset.f;
+  const d = ixMData(sel);
+  let vals = d.status === 'ok' ? [...new Set(d.data.map((p) => String(p[f] == null ? '' : p[f])))].filter(Boolean) : [];
+  if (f === 'estado') vals.sort((a, b) => ix.ordenEstado(a) - ix.ordenEstado(b));
+  else if (f === 'anio') vals.sort();
+  else vals.sort((a, b) => a.localeCompare(b, 'es'));
+  sel.replaceChildren(new Option('Todos', ''), ...vals.map((v) => new Option(v, v)));
+  sel.value = window.ixM[k][f];
+  sel.onchange = () => { window.ixM[k][f] = sel.value; window.ixM[k].n = 200; ixMRedraw(k); };
+});
+dash.draw('msel', (el) => {
+  const d = ixMData(el);
+  if (!ix.ready(el, d, false)) return;
+  const rows = ixMFiltrar(el.dataset.mec, d.data);
+  const k = el.dataset.k;
+  el.textContent = k === 'n' ? ix.num(rows.length) : k === 's' ? ix.cop(d3.sum(rows, (p) => Number(p.valor_solicitado_cop || 0))) : ix.cop(d3.sum(rows, (p) => Number(p.valor_cop || 0)));
+});
+dash.draw('mt', (el) => {
+  const d = ixMData(el);
+  if (!ix.ready(el, d, false)) return;
+  const e = ix.ESTADOS[Number(el.dataset.k) - 1];
+  el.textContent = ix.num(ixMFiltrar(el.dataset.mec, d.data, 'estado').filter((p) => p.estado === e).length);
+});
+const ixPorEstado = (v) => [1, 2, 3, 4, 5, 6, 7].map((o) => ({ o, n: v.filter((p) => ix.ordenEstado(p.estado) === o).length }));
+const ixEstadoTip = (por) => por.filter((s) => s.n).map((s) => ix.ESTADOS[s.o - 1] + ': ' + ix.num(s.n));
+function ixRanking(el, campo, salvo, top, aria, etiqueta) {
+  const k = el.dataset.mec;
+  const d = ixMData(el);
+  if (!ix.ready(el, d, true)) return;
+  const rows = d3.rollups(ixMFiltrar(k, d.data, salvo), (v) => ({ n: v.length, por: ixPorEstado(v) }), (p) => String(p[campo] == null ? 'Sin dato' : p[campo]))
+    .map(([key, a]) => ({ key, ...a })).sort((a, b) => campo === 'anio' ? d3.ascending(a.key, b.key) : b.n - a.n).slice(0, top);
+  if (!rows.length) return ix.empty(el, 'Ningún proyecto coincide con los filtros');
+  const sel = salvo ? window.ixM[k][salvo] : '';
+  ix.hbar(el, rows, {
+    aria,
+    label: (r) => (etiqueta ? etiqueta(r.key) : r.key),
+    segs: (r) => r.por.map((s) => ({ v: s.n, color: (!sel || sel === r.key) ? ix.estadoColor(s.o) : 'var(--cds-chart-muted)' })),
+    text: (r) => ix.num(r.n),
+    tip: (r) => ixEstadoTip(r.por),
+    onClick: salvo ? (r) => ixMSet(k, salvo, r.key) : null,
+  });
+}
+dash.draw('m-anio', (el) => ixRanking(el, 'anio', 'anio', 10, 'Proyectos por año y estado'));
+dash.draw('m-grupo', (el) => ixRanking(el, IX_GRUPO[el.dataset.mec], IX_GRUPO[el.dataset.mec], 14, 'Proyectos por grupo y estado'));
+dash.draw('m-depto', (el) => ixRanking(el, 'departamento', 'departamento', 12, 'Departamentos con más proyectos'));
+dash.draw('m-foco', (el) => ixRanking(el, 'foco', null, 4, 'Proyectos por tipo de territorio'));
+dash.draw('m-sub', (el) => {
+  const k = el.dataset.mec;
+  const d = ixMData(el);
+  if (!ix.ready(el, d, true)) return;
+  const rows = d3.rollups(ixMFiltrar(k, d.data, 'estado_fuente'), (v) => ({ n: v.length, valor: d3.sum(v, (p) => Number(p.valor_cop || 0)) }), (p) => p.estado_fuente || 'Sin dato')
+    .map(([key, a]) => ({ key, ...a })).sort((a, b) => b.n - a.n);
+  if (!rows.length) return ix.empty(el, 'Ningún proyecto coincide con los filtros');
+  const sel = window.ixM[k].estado_fuente;
+  ix.hbar(el, rows, {
+    aria: 'Proyectos en trámite por subestado',
+    label: (r) => r.key,
+    segs: (r) => [{ v: r.n, color: (!sel || sel === r.key) ? ix.estadoColor(1) : 'var(--cds-chart-muted)' }],
+    text: (r) => ix.num(r.n),
+    tip: (r) => [ix.num(r.n) + ' proyectos', ix.cop(r.valor) + ' formulados'],
+    onClick: (r) => ixMSet(k, 'estado_fuente', r.key),
+  });
+});
+dash.draw('m-motivo', (el) => {
+  const k = el.dataset.mec;
+  const d = ixMData(el);
+  if (!ix.ready(el, d, true)) return;
+  const rows = d3.rollups(ixMFiltrar(k, d.data).filter((p) => p.estado === 'Parado'), (v) => ({ n: v.length, valor: d3.sum(v, (p) => Number(p.valor_cop || 0)) }), (p) => p.motivo || 'Sin motivo')
+    .map(([key, a]) => ({ key, ...a })).sort((a, b) => b.n - a.n);
+  if (!rows.length) return ix.empty(el, 'Ningún proyecto parado en la selección');
+  ix.hbar(el, rows, {
+    aria: 'Proyectos parados por motivo',
+    label: (r) => r.key,
+    segs: (r) => [{ v: r.n, color: ix.estadoColor(5) }],
+    text: (r) => ix.num(r.n) + ' · ' + ix.copCorto(r.valor),
+    tip: (r) => [ix.num(r.n) + ' proyectos', ix.cop(r.valor)],
+  });
+});
+dash.draw('mcount', (el) => {
+  const d = ixMData(el);
+  if (!ix.ready(el, d, false)) return;
+  const n = ixMFiltrar(el.dataset.mec, d.data).length;
+  el.textContent = 'Se muestran ' + ix.num(Math.min(n, window.ixM[el.dataset.mec].n)) + ' de ' + ix.num(n);
+});
+dash.draw('mtabla', (tbody) => {
+  const k = tbody.dataset.mec;
+  const d = ixMData(tbody);
+  tbody.replaceChildren();
+  const mas = document.querySelectorAll('.ix-more[data-mec="' + k + '"]');
+  if (d.status !== 'ok') { mas.forEach((b) => { b.hidden = true; }); return; }
+  const s = window.ixM[k];
+  const val = (p, c) => (c === 'estado' ? ix.ordenEstado(p.estado) : p[c] == null ? (['valor_cop', 'valor_solicitado_cop', 'avance', 'anio'].includes(c) ? -1 : '') : p[c]);
+  const rows = ixMFiltrar(k, d.data).slice().sort((a, b) => {
+    const x = val(a, s.sort), y = val(b, s.sort);
+    const c = typeof x === 'number' && typeof y === 'number' ? x - y : String(x).localeCompare(String(y), 'es');
+    return c ? c * s.dir : (Number(b.valor_cop || 0) - Number(a.valor_cop || 0));
+  });
+  mas.forEach((b) => { b.hidden = rows.length <= s.n; });
+  const td = (t, cls) => { const c = document.createElement('td'); if (cls) c.className = cls; c.textContent = t; return c; };
+  rows.slice(0, s.n).forEach((p) => {
+    const tr = document.createElement('tr');
+    tr.dataset.key = p.codigo;
+    const est = document.createElement('td');
+    const pill = document.createElement('span');
+    pill.className = 'ix-pill';
+    const o = ix.ordenEstado(p.estado);
+    pill.style.color = o === 5 ? 'var(--color-bad)' : o === 6 ? 'var(--color-ok)' : 'var(--color-fg-muted)';
+    pill.textContent = k === 'tramite' ? p.estado_fuente : p.estado;
+    est.append(pill);
+    const nom = document.createElement('td');
+    nom.className = 'ix-name';
+    const a = document.createElement('a');
+    a.href = IX_FICHA[k] === 'cocrea' ? (p.enlace || 'https://colombiacrea.org') : 'https://mapainversiones.dnp.gov.co/Home/FichaProyectosMenuAllUsers?Bpin=' + encodeURIComponent(p.codigo);
+    a.target = '_blank';
+    a.rel = 'noopener';
+    if (p.nombre === String(p.nombre).toUpperCase()) a.className = 'ix-caps';
+    a.textContent = p.nombre;
+    nom.append(a);
+    const celdas = [est];
+    if (k === 'cocrea') celdas.push(td(p.codigo, 'ix-num ix-hide-n'));
+    celdas.push(nom, td(String(p.anio), 'ix-num'), td(p.entidad || '—', 'ix-hide-n'), td(p.municipio || '—', 'ix-hide-n'),
+      td(p.valor_cop != null ? ix.copCompleto(Number(p.valor_cop)) : (p.valor_atipico ? 'Atípico' : '—'), 'ix-num ix-r'));
+    if (k === 'cocrea') celdas.push(td(p.valor_solicitado_cop != null ? ix.copCompleto(Number(p.valor_solicitado_cop)) : '—', 'ix-num ix-r'), td(p.estado_fuente || '—', 'ix-hide-n'));
+    else if (k !== 'tramite') celdas.push(td(p.avance != null ? ix.pct(Number(p.avance) / 100) : '—', 'ix-num ix-r ix-hide-n'), td(p.motivo || p.estado_fuente || '—', 'ix-hide-n'));
+    tr.append(...celdas);
+    tbody.append(tr);
+  });
+});
+</script>

@@ -1,0 +1,3125 @@
+[
+  {
+    "codigo_dane": "05002",
+    "departamento": "Antioquia",
+    "municipio": "Abejorral",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05004",
+    "departamento": "Antioquia",
+    "municipio": "Abriaqu&iacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05021",
+    "departamento": "Antioquia",
+    "municipio": "Alejandr&iacute;a",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05031",
+    "departamento": "ANTIOQUIA",
+    "municipio": "AMALFI",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "BAJO CAUCA Y NORDESTE ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05038",
+    "departamento": "Antioquia",
+    "municipio": "Angostura",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05040",
+    "departamento": "ANTIOQUIA",
+    "municipio": "ANORÍ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "BAJO CAUCA Y NORDESTE ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05042",
+    "departamento": "Antioquia",
+    "municipio": "Santa Fe de Antioquia",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05045",
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADÓ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "URABÁ ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05055",
+    "departamento": "Antioquia",
+    "municipio": "Argelia",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05107",
+    "departamento": "ANTIOQUIA",
+    "municipio": "BRICEÑO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "BAJO CAUCA Y NORDESTE ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05120",
+    "departamento": "ANTIOQUIA",
+    "municipio": "CÁCERES",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "BAJO CAUCA Y NORDESTE ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05125",
+    "departamento": "Antioquia",
+    "municipio": "Caicedo",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05134",
+    "departamento": "Antioquia",
+    "municipio": "Campamento",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05147",
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAREPA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "URABÁ ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05154",
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "BAJO CAUCA Y NORDESTE ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05172",
+    "departamento": "ANTIOQUIA",
+    "municipio": "CHIGORODÓ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "URABÁ ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05197",
+    "departamento": "Antioquia",
+    "municipio": "Cocorn&aacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05206",
+    "departamento": "Antioquia",
+    "municipio": "Concepci&oacute;n",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05234",
+    "departamento": "ANTIOQUIA",
+    "municipio": "DABEIBA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "URABÁ ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05250",
+    "departamento": "ANTIOQUIA",
+    "municipio": "EL BAGRE",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "BAJO CAUCA Y NORDESTE ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05284",
+    "departamento": "Antioquia",
+    "municipio": "Frontino",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05313",
+    "departamento": "Antioquia",
+    "municipio": "Granada",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05315",
+    "departamento": "Antioquia",
+    "municipio": "Guadalupe",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05361",
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITUANGO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "BAJO CAUCA Y NORDESTE ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05467",
+    "departamento": "Antioquia",
+    "municipio": "Montebello",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05475",
+    "departamento": "ANTIOQUIA",
+    "municipio": "MURINDÓ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CHOCÓ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05480",
+    "departamento": "ANTIOQUIA",
+    "municipio": "MUTATÁ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "URABÁ ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05483",
+    "departamento": "Antioquia",
+    "municipio": "Nari&ntilde;o",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05490",
+    "departamento": "ANTIOQUIA",
+    "municipio": "NECOCLÍ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "URABÁ ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05495",
+    "departamento": "ANTIOQUIA",
+    "municipio": "NECHÍ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "BAJO CAUCA Y NORDESTE ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05579",
+    "departamento": "Antioquia",
+    "municipio": "Puerto Berr&iacute;o",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05604",
+    "departamento": "ANTIOQUIA",
+    "municipio": "REMEDIOS",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "BAJO CAUCA Y NORDESTE ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05642",
+    "departamento": "Antioquia",
+    "municipio": "Salgar",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05647",
+    "departamento": "Antioquia",
+    "municipio": "San Andr&eacute;s de Cuerqu&iacute;a",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05649",
+    "departamento": "Antioquia",
+    "municipio": "San Carlos",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05652",
+    "departamento": "Antioquia",
+    "municipio": "San Francisco",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05660",
+    "departamento": "Antioquia",
+    "municipio": "San Luis",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05665",
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN PEDRO DE URABA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "URABÁ ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05667",
+    "departamento": "Antioquia",
+    "municipio": "San Rafael",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05690",
+    "departamento": "Antioquia",
+    "municipio": "Santo Domingo",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05736",
+    "departamento": "ANTIOQUIA",
+    "municipio": "SEGOVIA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "BAJO CAUCA Y NORDESTE ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05756",
+    "departamento": "Antioquia",
+    "municipio": "Sons&oacute;n",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05790",
+    "departamento": "ANTIOQUIA",
+    "municipio": "TARAZÁ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "BAJO CAUCA Y NORDESTE ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05819",
+    "departamento": "Antioquia",
+    "municipio": "Toledo",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05837",
+    "departamento": "ANTIOQUIA",
+    "municipio": "TURBO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "URABÁ ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05842",
+    "departamento": "Antioquia",
+    "municipio": "Uramita",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05847",
+    "departamento": "Antioquia",
+    "municipio": "Urrao",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05854",
+    "departamento": "ANTIOQUIA",
+    "municipio": "VALDIVIA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "BAJO CAUCA Y NORDESTE ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05858",
+    "departamento": "Antioquia",
+    "municipio": "Vegach&iacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05873",
+    "departamento": "ANTIOQUIA",
+    "municipio": "VIGÍA DEL FUERTE",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CHOCÓ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05885",
+    "departamento": "Antioquia",
+    "municipio": "Yal&iacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05887",
+    "departamento": "Antioquia",
+    "municipio": "Yarumal",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05890",
+    "departamento": "Antioquia",
+    "municipio": "Yolomb&oacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "05893",
+    "departamento": "ANTIOQUIA",
+    "municipio": "YONDÓ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SUR DE BOLÍVAR",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "05895",
+    "departamento": "ANTIOQUIA",
+    "municipio": "ZARAGOZA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "BAJO CAUCA Y NORDESTE ANTIOQUEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "13042",
+    "departamento": "BOLÍVAR",
+    "municipio": "ARENAL",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SUR DE BOLÍVAR",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "13160",
+    "departamento": "BOLÍVAR",
+    "municipio": "CANTAGALLO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SUR DE BOLÍVAR",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "13212",
+    "departamento": "BOLÍVAR",
+    "municipio": "CÓRDOBA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MONTES DE MARÍA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "13244",
+    "departamento": "BOLÍVAR",
+    "municipio": "EL CARMEN DE BOLÍVAR",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MONTES DE MARÍA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "13248",
+    "departamento": "BOLÍVAR",
+    "municipio": "EL GUAMO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MONTES DE MARÍA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "13442",
+    "departamento": "BOLÍVAR",
+    "municipio": "MARÍA LA BAJA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MONTES DE MARÍA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "13458",
+    "departamento": "Bol&iacute;var",
+    "municipio": "Montecristo",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "13473",
+    "departamento": "BOLÍVAR",
+    "municipio": "MORALES",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SUR DE BOLÍVAR",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "13600",
+    "departamento": "Bol&iacute;var",
+    "municipio": "R&iacute;o Viejo",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "13654",
+    "departamento": "BOLÍVAR",
+    "municipio": "SAN JACINTO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MONTES DE MARÍA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "13657",
+    "departamento": "BOLÍVAR",
+    "municipio": "SAN JUAN NEPOMUCENO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MONTES DE MARÍA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "13670",
+    "departamento": "BOLÍVAR",
+    "municipio": "SAN PABLO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SUR DE BOLÍVAR",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "13688",
+    "departamento": "BOLÍVAR",
+    "municipio": "SANTA ROSA DEL SUR",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SUR DE BOLÍVAR",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "13744",
+    "departamento": "BOLÍVAR",
+    "municipio": "SIMITÍ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SUR DE BOLÍVAR",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "13810",
+    "departamento": "Bol&iacute;var",
+    "municipio": "Tiquisio",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "13894",
+    "departamento": "BOLÍVAR",
+    "municipio": "ZAMBRANO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MONTES DE MARÍA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "15236",
+    "departamento": "Boyac&aacute;",
+    "municipio": "Chivor",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "15377",
+    "departamento": "Boyac&aacute;",
+    "municipio": "Labranzagrande",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "15518",
+    "departamento": "Boyac&aacute;",
+    "municipio": "Pajarito",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "15533",
+    "departamento": "Boyac&aacute;",
+    "municipio": "Paya",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "15550",
+    "departamento": "Boyac&aacute;",
+    "municipio": "Pisba",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "17042",
+    "departamento": "Caldas",
+    "municipio": "Anserma",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "17088",
+    "departamento": "Caldas",
+    "municipio": "Belalc&aacute;zar",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "17446",
+    "departamento": "Caldas",
+    "municipio": "Marulanda",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "17495",
+    "departamento": "Caldas",
+    "municipio": "Norcasia",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "17524",
+    "departamento": "Caldas",
+    "municipio": "Palestina",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "17541",
+    "departamento": "Caldas",
+    "municipio": "Pensilvania",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "17614",
+    "departamento": "Caldas",
+    "municipio": "Riosucio",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "17616",
+    "departamento": "Caldas",
+    "municipio": "Risaralda",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "17662",
+    "departamento": "Caldas",
+    "municipio": "Saman&aacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "18001",
+    "departamento": "CAQUETÁ",
+    "municipio": "FLORENCIA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CUENCA DEL CAGUÁN Y PIEDEMONTE CAQUETEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "18029",
+    "departamento": "CAQUETÁ",
+    "municipio": "ALBANIA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CUENCA DEL CAGUÁN Y PIEDEMONTE CAQUETEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "18094",
+    "departamento": "CAQUETÁ",
+    "municipio": "BELÉN DE LOS ANDAQUÍES",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CUENCA DEL CAGUÁN Y PIEDEMONTE CAQUETEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "18150",
+    "departamento": "CAQUETÁ",
+    "municipio": "CARTAGENA DEL CHAIRÁ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CUENCA DEL CAGUÁN Y PIEDEMONTE CAQUETEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "18205",
+    "departamento": "CAQUETÁ",
+    "municipio": "CURILLO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CUENCA DEL CAGUÁN Y PIEDEMONTE CAQUETEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "18247",
+    "departamento": "CAQUETÁ",
+    "municipio": "EL DONCELLO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CUENCA DEL CAGUÁN Y PIEDEMONTE CAQUETEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "18256",
+    "departamento": "CAQUETÁ",
+    "municipio": "EL PAUJIL",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CUENCA DEL CAGUÁN Y PIEDEMONTE CAQUETEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "18410",
+    "departamento": "CAQUETÁ",
+    "municipio": "LA MONTAÑITA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CUENCA DEL CAGUÁN Y PIEDEMONTE CAQUETEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "18460",
+    "departamento": "CAQUETÁ",
+    "municipio": "MILÁN",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CUENCA DEL CAGUÁN Y PIEDEMONTE CAQUETEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "18479",
+    "departamento": "CAQUETÁ",
+    "municipio": "MORELIA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CUENCA DEL CAGUÁN Y PIEDEMONTE CAQUETEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "18592",
+    "departamento": "CAQUETÁ",
+    "municipio": "PUERTO RICO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CUENCA DEL CAGUÁN Y PIEDEMONTE CAQUETEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "18610",
+    "departamento": "CAQUETÁ",
+    "municipio": "SAN JOSÉ DEL FRAGUA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CUENCA DEL CAGUÁN Y PIEDEMONTE CAQUETEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "18753",
+    "departamento": "CAQUETÁ",
+    "municipio": "SAN VICENTE DEL CAGUÁN",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CUENCA DEL CAGUÁN Y PIEDEMONTE CAQUETEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "18756",
+    "departamento": "CAQUETÁ",
+    "municipio": "SOLANO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CUENCA DEL CAGUÁN Y PIEDEMONTE CAQUETEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "18785",
+    "departamento": "CAQUETÁ",
+    "municipio": "SOLITA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CUENCA DEL CAGUÁN Y PIEDEMONTE CAQUETEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "18860",
+    "departamento": "CAQUETÁ",
+    "municipio": "VALPARAÍSO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CUENCA DEL CAGUÁN Y PIEDEMONTE CAQUETEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19050",
+    "departamento": "CAUCA",
+    "municipio": "ARGELIA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19075",
+    "departamento": "CAUCA",
+    "municipio": "BALBOA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19110",
+    "departamento": "CAUCA",
+    "municipio": "BUENOS AIRES",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19130",
+    "departamento": "CAUCA",
+    "municipio": "CAJIBÍO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19137",
+    "departamento": "CAUCA",
+    "municipio": "CALDONO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19142",
+    "departamento": "CAUCA",
+    "municipio": "CALOTO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19212",
+    "departamento": "CAUCA",
+    "municipio": "CORINTO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19256",
+    "departamento": "CAUCA",
+    "municipio": "EL TAMBO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19290",
+    "departamento": "Cauca",
+    "municipio": "Florencia",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "19318",
+    "departamento": "CAUCA",
+    "municipio": "GUAPI",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PACÍFICO MEDIO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19364",
+    "departamento": "CAUCA",
+    "municipio": "JAMBALÓ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19418",
+    "departamento": "CAUCA",
+    "municipio": "LÓPEZ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PACÍFICO MEDIO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19450",
+    "departamento": "CAUCA",
+    "municipio": "MERCADERES",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19455",
+    "departamento": "CAUCA",
+    "municipio": "MIRANDA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19473",
+    "departamento": "CAUCA",
+    "municipio": "MORALES",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19532",
+    "departamento": "CAUCA",
+    "municipio": "PATÍA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19533",
+    "departamento": "Cauca",
+    "municipio": "Piamonte",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "19548",
+    "departamento": "CAUCA",
+    "municipio": "PIENDAMÓ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19698",
+    "departamento": "CAUCA",
+    "municipio": "SANTANDER DE QUILICHAO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19701",
+    "departamento": "Cauca",
+    "municipio": "Santa Rosa",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "19780",
+    "departamento": "CAUCA",
+    "municipio": "SUÁREZ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19809",
+    "departamento": "CAUCA",
+    "municipio": "TIMBIQUÍ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PACÍFICO MEDIO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "19821",
+    "departamento": "CAUCA",
+    "municipio": "TORIBIO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "20001",
+    "departamento": "CESAR",
+    "municipio": "VALLEDUPAR",
+    "pdet": true,
+    "zomac": false,
+    "subregion_pdet": "SIERRA NEVADA - PERIJÁ",
+    "tipo": "Solo PDET"
+  },
+  {
+    "codigo_dane": "20011",
+    "departamento": "Cesar",
+    "municipio": "Aguachica",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "20013",
+    "departamento": "CESAR",
+    "municipio": "AGUSTÍN CODAZZI",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SIERRA NEVADA - PERIJÁ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "20045",
+    "departamento": "CESAR",
+    "municipio": "BECERRIL",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SIERRA NEVADA - PERIJÁ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "20060",
+    "departamento": "Cesar",
+    "municipio": "Bosconia",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "20178",
+    "departamento": "Cesar",
+    "municipio": "Chiriguan&aacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "20228",
+    "departamento": "Cesar",
+    "municipio": "Curuman&iacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "20238",
+    "departamento": "Cesar",
+    "municipio": "El Copey",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "20383",
+    "departamento": "Cesar",
+    "municipio": "La Gloria",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "20400",
+    "departamento": "CESAR",
+    "municipio": "LA JAGUA DE IBIRICO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SIERRA NEVADA - PERIJÁ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "20443",
+    "departamento": "CESAR",
+    "municipio": "MANAURE BALCÓN DEL CESAR",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SIERRA NEVADA - PERIJÁ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "20517",
+    "departamento": "Cesar",
+    "municipio": "Pailitas",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "20550",
+    "departamento": "Cesar",
+    "municipio": "Pelaya",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "20570",
+    "departamento": "CESAR",
+    "municipio": "PUEBLO BELLO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SIERRA NEVADA - PERIJÁ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "20621",
+    "departamento": "CESAR",
+    "municipio": "LA PAZ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SIERRA NEVADA - PERIJÁ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "20750",
+    "departamento": "CESAR",
+    "municipio": "SAN DIEGO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SIERRA NEVADA - PERIJÁ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "23466",
+    "departamento": "CÓRDOBA",
+    "municipio": "MONTELÍBANO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SUR DE CÓRDOBA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "23580",
+    "departamento": "CÓRDOBA",
+    "municipio": "PUERTO LIBERTADOR",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SUR DE CÓRDOBA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "23682",
+    "departamento": "CÓRDOBA",
+    "municipio": "SAN JOSE DE URE",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SUR DE CÓRDOBA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "23807",
+    "departamento": "CÓRDOBA",
+    "municipio": "TIERRALTA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SUR DE CÓRDOBA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "23855",
+    "departamento": "CÓRDOBA",
+    "municipio": "VALENCIA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SUR DE CÓRDOBA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "25120",
+    "departamento": "Cundinamarca",
+    "municipio": "Cabrera",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "25168",
+    "departamento": "Cundinamarca",
+    "municipio": "Chaguan&iacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "25258",
+    "departamento": "Cundinamarca",
+    "municipio": "El Pe&ntilde;&oacute;n",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "25328",
+    "departamento": "Cundinamarca",
+    "municipio": "Guayabal de S&iacute;quima",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "25335",
+    "departamento": "Cundinamarca",
+    "municipio": "Guayabetal",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "25394",
+    "departamento": "Cundinamarca",
+    "municipio": "La Palma",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "25438",
+    "departamento": "Cundinamarca",
+    "municipio": "Medina",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "25530",
+    "departamento": "Cundinamarca",
+    "municipio": "Paratebueno",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "25580",
+    "departamento": "Cundinamarca",
+    "municipio": "Pul&iacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "25743",
+    "departamento": "Cundinamarca",
+    "municipio": "Silvania",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "25823",
+    "departamento": "Cundinamarca",
+    "municipio": "Topaip&iacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "25878",
+    "departamento": "Cundinamarca",
+    "municipio": "Viot&aacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "27001",
+    "departamento": "Choc&oacute;",
+    "municipio": "Quibd&oacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "27006",
+    "departamento": "CHOCÓ",
+    "municipio": "ACANDÍ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CHOCÓ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "27073",
+    "departamento": "Choc&oacute;",
+    "municipio": "Bagad&oacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "27077",
+    "departamento": "Choc&oacute;",
+    "municipio": "Bajo Baud&oacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "27099",
+    "departamento": "CHOCÓ",
+    "municipio": "BOJAYA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CHOCÓ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "27150",
+    "departamento": "CHOCÓ",
+    "municipio": "CARMEN DEL DARIEN",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CHOCÓ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "27205",
+    "departamento": "CHOCÓ",
+    "municipio": "CONDOTO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CHOCÓ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "27245",
+    "departamento": "Choc&oacute;",
+    "municipio": "El Carmen de Atrato",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "27250",
+    "departamento": "CHOCÓ",
+    "municipio": "EL LITORAL DEL SAN JUAN",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CHOCÓ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "27361",
+    "departamento": "CHOCÓ",
+    "municipio": "ISTMINA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CHOCÓ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "27425",
+    "departamento": "CHOCÓ",
+    "municipio": "MEDIO ATRATO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CHOCÓ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "27450",
+    "departamento": "CHOCÓ",
+    "municipio": "MEDIO SAN JUAN",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CHOCÓ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "27491",
+    "departamento": "CHOCÓ",
+    "municipio": "NÓVITA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CHOCÓ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "27615",
+    "departamento": "CHOCÓ",
+    "municipio": "RIOSUCIO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CHOCÓ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "27660",
+    "departamento": "Choc&oacute;",
+    "municipio": "San Jos&eacute; del Palmar",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "27745",
+    "departamento": "CHOCÓ",
+    "municipio": "SIPÍ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CHOCÓ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "27787",
+    "departamento": "Choc&oacute;",
+    "municipio": "Tad&oacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "27800",
+    "departamento": "CHOCÓ",
+    "municipio": "UNGUÍA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CHOCÓ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "41006",
+    "departamento": "Huila",
+    "municipio": "Acevedo",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "41020",
+    "departamento": "HUILA",
+    "municipio": "ALGECIRAS",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CUENCA DEL CAGUÁN Y PIEDEMONTE CAQUETEÑO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "41078",
+    "departamento": "Huila",
+    "municipio": "Baraya",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "41206",
+    "departamento": "Huila",
+    "municipio": "Colombia",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "41349",
+    "departamento": "Huila",
+    "municipio": "Hobo",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "41359",
+    "departamento": "Huila",
+    "municipio": "Isnos",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "41799",
+    "departamento": "Huila",
+    "municipio": "Tello",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "44001",
+    "departamento": "La Guajira",
+    "municipio": "Riohacha",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "44090",
+    "departamento": "LA GUAJIRA",
+    "municipio": "DIBULLA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SIERRA NEVADA - PERIJÁ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "44110",
+    "departamento": "La Guajira",
+    "municipio": "El Molino",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "44279",
+    "departamento": "LA GUAJIRA",
+    "municipio": "FONSECA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SIERRA NEVADA - PERIJÁ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "44420",
+    "departamento": "La Guajira",
+    "municipio": "La Jagua del Pilar",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "44430",
+    "departamento": "La Guajira",
+    "municipio": "Maicao",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "44650",
+    "departamento": "LA GUAJIRA",
+    "municipio": "SAN JUAN DEL CESAR",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SIERRA NEVADA - PERIJÁ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "44855",
+    "departamento": "La Guajira",
+    "municipio": "Urumita",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "44874",
+    "departamento": "La Guajira",
+    "municipio": "Villanueva",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "47001",
+    "departamento": "MAGDALENA",
+    "municipio": "SANTA MARTA",
+    "pdet": true,
+    "zomac": false,
+    "subregion_pdet": "SIERRA NEVADA - PERIJÁ",
+    "tipo": "Solo PDET"
+  },
+  {
+    "codigo_dane": "47053",
+    "departamento": "MAGDALENA",
+    "municipio": "ARACATACA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SIERRA NEVADA - PERIJÁ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "47189",
+    "departamento": "MAGDALENA",
+    "municipio": "CIÉNAGA",
+    "pdet": true,
+    "zomac": false,
+    "subregion_pdet": "SIERRA NEVADA - PERIJÁ",
+    "tipo": "Solo PDET"
+  },
+  {
+    "codigo_dane": "47288",
+    "departamento": "MAGDALENA",
+    "municipio": "FUNDACIÓN",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SIERRA NEVADA - PERIJÁ",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "50110",
+    "departamento": "Meta",
+    "municipio": "Barranca de Up&iacute;a",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "50223",
+    "departamento": "Meta",
+    "municipio": "Cubarral",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "50245",
+    "departamento": "Meta",
+    "municipio": "El Calvario",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "50251",
+    "departamento": "Meta",
+    "municipio": "El Castillo",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "50270",
+    "departamento": "Meta",
+    "municipio": "El Dorado",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "50287",
+    "departamento": "Meta",
+    "municipio": "Fuente de Oro",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "50313",
+    "departamento": "Meta",
+    "municipio": "Granada",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "50325",
+    "departamento": "META",
+    "municipio": "MAPIRIPÁN",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MACARENA - GUAVIARE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "50330",
+    "departamento": "META",
+    "municipio": "MESETAS",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MACARENA - GUAVIARE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "50350",
+    "departamento": "META",
+    "municipio": "LA MACARENA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MACARENA - GUAVIARE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "50370",
+    "departamento": "META",
+    "municipio": "URIBE",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MACARENA - GUAVIARE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "50400",
+    "departamento": "Meta",
+    "municipio": "Lejan&iacute;as",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "50450",
+    "departamento": "META",
+    "municipio": "PUERTO CONCORDIA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MACARENA - GUAVIARE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "50568",
+    "departamento": "Meta",
+    "municipio": "Puerto Gait&aacute;n",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "50577",
+    "departamento": "META",
+    "municipio": "PUERTO LLERAS",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MACARENA - GUAVIARE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "50590",
+    "departamento": "META",
+    "municipio": "PUERTO RICO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MACARENA - GUAVIARE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "50683",
+    "departamento": "Meta",
+    "municipio": "San Juan de Arama",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "50686",
+    "departamento": "Meta",
+    "municipio": "San Juanito",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "50689",
+    "departamento": "Meta",
+    "municipio": "San Mart&iacute;n",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "50711",
+    "departamento": "META",
+    "municipio": "VISTA HERMOSA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MACARENA - GUAVIARE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "52079",
+    "departamento": "NARIÑO",
+    "municipio": "BARBACOAS",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PACÍFICO Y FRONTERA NARIÑENSE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "52233",
+    "departamento": "NARIÑO",
+    "municipio": "CUMBITARA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "52250",
+    "departamento": "NARIÑO",
+    "municipio": "EL CHARCO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PACÍFICO Y FRONTERA NARIÑENSE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "52254",
+    "departamento": "Nari&ntilde;o",
+    "municipio": "El Pe&ntilde;ol",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "52256",
+    "departamento": "NARIÑO",
+    "municipio": "EL ROSARIO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "52356",
+    "departamento": "Nari&ntilde;o",
+    "municipio": "Ipiales",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "52385",
+    "departamento": "Nari&ntilde;o",
+    "municipio": "La Llanada",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "52390",
+    "departamento": "NARIÑO",
+    "municipio": "LA TOLA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PACÍFICO Y FRONTERA NARIÑENSE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "52405",
+    "departamento": "NARIÑO",
+    "municipio": "LEIVA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "52411",
+    "departamento": "Nari&ntilde;o",
+    "municipio": "Linares",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "52418",
+    "departamento": "NARIÑO",
+    "municipio": "LOS ANDES",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "52427",
+    "departamento": "NARIÑO",
+    "municipio": "MAGÜI",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PACÍFICO Y FRONTERA NARIÑENSE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "52435",
+    "departamento": "Nari&ntilde;o",
+    "municipio": "Mallama",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "52473",
+    "departamento": "NARIÑO",
+    "municipio": "MOSQUERA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PACÍFICO Y FRONTERA NARIÑENSE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "52490",
+    "departamento": "NARIÑO",
+    "municipio": "OLAYA HERRERA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PACÍFICO Y FRONTERA NARIÑENSE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "52520",
+    "departamento": "NARIÑO",
+    "municipio": "FRANCISCO PIZARRO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PACÍFICO Y FRONTERA NARIÑENSE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "52540",
+    "departamento": "NARIÑO",
+    "municipio": "POLICARPA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "52573",
+    "departamento": "Nari&ntilde;o",
+    "municipio": "Puerres",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "52612",
+    "departamento": "NARIÑO",
+    "municipio": "RICAURTE",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PACÍFICO Y FRONTERA NARIÑENSE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "52621",
+    "departamento": "NARIÑO",
+    "municipio": "ROBERTO PAYÁN",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PACÍFICO Y FRONTERA NARIÑENSE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "52678",
+    "departamento": "Nari&ntilde;o",
+    "municipio": "Samaniego",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "52696",
+    "departamento": "NARIÑO",
+    "municipio": "SANTA BÁRBARA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PACÍFICO Y FRONTERA NARIÑENSE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "52835",
+    "departamento": "NARIÑO",
+    "municipio": "SAN ANDRES DE TUMACO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PACÍFICO Y FRONTERA NARIÑENSE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "54109",
+    "departamento": "Norte de Santander",
+    "municipio": "Bucarasica",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "54206",
+    "departamento": "NORTE DE SANTANDER",
+    "municipio": "CONVENCIÓN",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CATATUMBO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "54245",
+    "departamento": "NORTE DE SANTANDER",
+    "municipio": "EL CARMEN",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CATATUMBO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "54250",
+    "departamento": "NORTE DE SANTANDER",
+    "municipio": "EL TARRA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CATATUMBO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "54261",
+    "departamento": "Norte de Santander",
+    "municipio": "El Zulia",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "54344",
+    "departamento": "NORTE DE SANTANDER",
+    "municipio": "HACARÍ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CATATUMBO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "54398",
+    "departamento": "Norte de Santander",
+    "municipio": "La Playa",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "54670",
+    "departamento": "NORTE DE SANTANDER",
+    "municipio": "SAN CALIXTO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CATATUMBO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "54680",
+    "departamento": "Norte de Santander",
+    "municipio": "Santiago",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "54720",
+    "departamento": "NORTE DE SANTANDER",
+    "municipio": "SARDINATA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CATATUMBO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "54800",
+    "departamento": "NORTE DE SANTANDER",
+    "municipio": "TEORAMA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CATATUMBO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "54810",
+    "departamento": "NORTE DE SANTANDER",
+    "municipio": "TIBÚ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "CATATUMBO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "63302",
+    "departamento": "Quind&iacute;o",
+    "municipio": "Genova",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "63548",
+    "departamento": "Quind&iacute;o",
+    "municipio": "Pijao",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "63690",
+    "departamento": "Quind&iacute;o",
+    "municipio": "Salento",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "66075",
+    "departamento": "Risaralda",
+    "municipio": "Balboa",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "66456",
+    "departamento": "Risaralda",
+    "municipio": "Mistrat&oacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "66572",
+    "departamento": "Risaralda",
+    "municipio": "Pueblo Rico",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "66594",
+    "departamento": "Risaralda",
+    "municipio": "Quinch&iacute;a",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "68101",
+    "departamento": "Santander",
+    "municipio": "Bol&iacute;var",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "68169",
+    "departamento": "Santander",
+    "municipio": "Charta",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "68255",
+    "departamento": "Santander",
+    "municipio": "El Play&oacute;n",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "68377",
+    "departamento": "Santander",
+    "municipio": "La Belleza",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "68385",
+    "departamento": "Santander",
+    "municipio": "Land&aacute;zuri",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "68444",
+    "departamento": "Santander",
+    "municipio": "Matanza",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "68615",
+    "departamento": "Santander",
+    "municipio": "Rionegro",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "68655",
+    "departamento": "Santander",
+    "municipio": "Sabana de Torres",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "68773",
+    "departamento": "Santander",
+    "municipio": "Sucre",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "68780",
+    "departamento": "Santander",
+    "municipio": "Surat&aacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "70204",
+    "departamento": "SUCRE",
+    "municipio": "COLOSO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MONTES DE MARÍA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "70230",
+    "departamento": "SUCRE",
+    "municipio": "CHALÁN",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MONTES DE MARÍA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "70418",
+    "departamento": "SUCRE",
+    "municipio": "LOS PALMITOS",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MONTES DE MARÍA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "70473",
+    "departamento": "SUCRE",
+    "municipio": "MORROA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MONTES DE MARÍA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "70508",
+    "departamento": "SUCRE",
+    "municipio": "OVEJAS",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MONTES DE MARÍA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "70523",
+    "departamento": "SUCRE",
+    "municipio": "SAN ANTONIO DE PALMITO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MONTES DE MARÍA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "70713",
+    "departamento": "SUCRE",
+    "municipio": "SAN ONOFRE",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MONTES DE MARÍA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "70823",
+    "departamento": "SUCRE",
+    "municipio": "TOLÚ VIEJO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MONTES DE MARÍA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "73026",
+    "departamento": "Tolima",
+    "municipio": "Alvarado",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "73043",
+    "departamento": "Tolima",
+    "municipio": "Anzo&aacute;tegui",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "73067",
+    "departamento": "TOLIMA",
+    "municipio": "ATACO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SUR DEL TOLIMA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "73124",
+    "departamento": "Tolima",
+    "municipio": "Cajamarca",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "73152",
+    "departamento": "Tolima",
+    "municipio": "Casablanca",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "73168",
+    "departamento": "TOLIMA",
+    "municipio": "CHAPARRAL",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SUR DEL TOLIMA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "73236",
+    "departamento": "Tolima",
+    "municipio": "Dolores",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "73347",
+    "departamento": "Tolima",
+    "municipio": "Herveo",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "73408",
+    "departamento": "Tolima",
+    "municipio": "L&eacute;rida",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "73461",
+    "departamento": "Tolima",
+    "municipio": "Murillo",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "73504",
+    "departamento": "Tolima",
+    "municipio": "Ortega",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "73555",
+    "departamento": "TOLIMA",
+    "municipio": "PLANADAS",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SUR DEL TOLIMA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "73563",
+    "departamento": "Tolima",
+    "municipio": "Prado",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "73616",
+    "departamento": "TOLIMA",
+    "municipio": "RIOBLANCO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "SUR DEL TOLIMA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "73622",
+    "departamento": "Tolima",
+    "municipio": "Roncesvalles",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "73624",
+    "departamento": "Tolima",
+    "municipio": "Rovira",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "73675",
+    "departamento": "Tolima",
+    "municipio": "San Antonio",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "73686",
+    "departamento": "Tolima",
+    "municipio": "Santa Isabel",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "73861",
+    "departamento": "Tolima",
+    "municipio": "Venadillo",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "73870",
+    "departamento": "Tolima",
+    "municipio": "Villahermosa",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "73873",
+    "departamento": "Tolima",
+    "municipio": "Villarrica",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "76041",
+    "departamento": "Valle del Cauca",
+    "municipio": "Ansermanuevo",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "76054",
+    "departamento": "Valle del Cauca",
+    "municipio": "Argelia",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "76100",
+    "departamento": "Valle del Cauca",
+    "municipio": "Bol&iacute;var",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "76109",
+    "departamento": "VALLE DEL CAUCA",
+    "municipio": "BUENAVENTURA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PACÍFICO MEDIO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "76122",
+    "departamento": "Valle del Cauca",
+    "municipio": "Caicedonia",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "76126",
+    "departamento": "Valle del Cauca",
+    "municipio": "Calima",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "76233",
+    "departamento": "Valle del Cauca",
+    "municipio": "Dagua",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "76243",
+    "departamento": "Valle del Cauca",
+    "municipio": "El &Aacute;guila",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "76246",
+    "departamento": "Valle del Cauca",
+    "municipio": "El Cairo",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "76250",
+    "departamento": "Valle del Cauca",
+    "municipio": "El Dovio",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "76275",
+    "departamento": "VALLE DEL CAUCA",
+    "municipio": "FLORIDA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "76563",
+    "departamento": "VALLE DEL CAUCA",
+    "municipio": "PRADERA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ALTO PATÍA Y NORTE DEL CAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "76616",
+    "departamento": "Valle del Cauca",
+    "municipio": "Riofr&iacute;o",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "76622",
+    "departamento": "Valle del Cauca",
+    "municipio": "Roldanillo",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "76890",
+    "departamento": "Valle del Cauca",
+    "municipio": "Yotoco",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "81001",
+    "departamento": "Arauca",
+    "municipio": "Arauca",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "81065",
+    "departamento": "ARAUCA",
+    "municipio": "ARAUQUITA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ARAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "81220",
+    "departamento": "Arauca",
+    "municipio": "Cravo Norte",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "81300",
+    "departamento": "ARAUCA",
+    "municipio": "FORTUL",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ARAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "81591",
+    "departamento": "Arauca",
+    "municipio": "Puerto Rond&oacute;n",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "81736",
+    "departamento": "ARAUCA",
+    "municipio": "SARAVENA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ARAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "81794",
+    "departamento": "ARAUCA",
+    "municipio": "TAME",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "ARAUCA",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "85010",
+    "departamento": "Casanare",
+    "municipio": "Aguazul",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "85015",
+    "departamento": "Casanare",
+    "municipio": "Ch&aacute;meza",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "85125",
+    "departamento": "Casanare",
+    "municipio": "Hato Corozal",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "85136",
+    "departamento": "Casanare",
+    "municipio": "La Salina",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "85139",
+    "departamento": "Casanare",
+    "municipio": "Man&iacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "85162",
+    "departamento": "Casanare",
+    "municipio": "Monterrey",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "85250",
+    "departamento": "Casanare",
+    "municipio": "Paz de Ariporo",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "85263",
+    "departamento": "Casanare",
+    "municipio": "Pore",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "85279",
+    "departamento": "Casanare",
+    "municipio": "Recetor",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "85300",
+    "departamento": "Casanare",
+    "municipio": "Sabanalarga",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "85315",
+    "departamento": "Casanare",
+    "municipio": "S&aacute;cama",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "85400",
+    "departamento": "Casanare",
+    "municipio": "T&aacute;mara",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "85410",
+    "departamento": "Casanare",
+    "municipio": "Tauramena",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "85440",
+    "departamento": "Casanare",
+    "municipio": "Villanueva",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "86001",
+    "departamento": "PUTUMAYO",
+    "municipio": "MOCOA",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PUTUMAYO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "86320",
+    "departamento": "PUTUMAYO",
+    "municipio": "ORITO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PUTUMAYO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "86568",
+    "departamento": "PUTUMAYO",
+    "municipio": "PUERTO ASÍS",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PUTUMAYO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "86569",
+    "departamento": "PUTUMAYO",
+    "municipio": "PUERTO CAICEDO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PUTUMAYO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "86571",
+    "departamento": "PUTUMAYO",
+    "municipio": "PUERTO GUZMÁN",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PUTUMAYO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "86573",
+    "departamento": "PUTUMAYO",
+    "municipio": "LEGUÍZAMO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PUTUMAYO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "86757",
+    "departamento": "PUTUMAYO",
+    "municipio": "SAN MIGUEL",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PUTUMAYO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "86865",
+    "departamento": "PUTUMAYO",
+    "municipio": "VALLE DEL GUAMUEZ",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PUTUMAYO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "86885",
+    "departamento": "PUTUMAYO",
+    "municipio": "VILLAGARZÓN",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "PUTUMAYO",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "95001",
+    "departamento": "GUAVIARE",
+    "municipio": "SAN JOSÉ DEL GUAVIARE",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MACARENA - GUAVIARE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "95015",
+    "departamento": "GUAVIARE",
+    "municipio": "CALAMAR",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MACARENA - GUAVIARE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "95025",
+    "departamento": "GUAVIARE",
+    "municipio": "EL RETORNO",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MACARENA - GUAVIARE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "95200",
+    "departamento": "GUAVIARE",
+    "municipio": "MIRAFLORES",
+    "pdet": true,
+    "zomac": true,
+    "subregion_pdet": "MACARENA - GUAVIARE",
+    "tipo": "PDET y ZOMAC"
+  },
+  {
+    "codigo_dane": "97161",
+    "departamento": "Vaup&eacute;s",
+    "municipio": "Carur&uacute;",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  },
+  {
+    "codigo_dane": "99773",
+    "departamento": "Vichada",
+    "municipio": "Cumaribo",
+    "pdet": false,
+    "zomac": true,
+    "subregion_pdet": null,
+    "tipo": "Solo ZOMAC"
+  }
+]

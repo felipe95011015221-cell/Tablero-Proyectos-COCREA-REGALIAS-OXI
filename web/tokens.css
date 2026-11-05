@@ -1,0 +1,150 @@
+/*
+ * tokens.css: colores, tipografía y espacios que en Claude entrega el tipo Dashboard.
+ * Con este archivo el tablero funciona como página independiente, en tema claro y oscuro.
+ */
+:root {
+  color-scheme: light;
+  --font-anthropic-sans: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-anthropic-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+
+  --color-bg: #f7f7f4;
+  --color-panel: #ffffff;
+  --color-fg: #1c1d1f;
+  --color-fg-muted: #5f6166;
+  --color-border-line: #e2e2dc;
+  --color-ok: #1f7a3d;
+  --color-warn: #9a6200;
+  --color-bad: #c0352b;
+
+  --ox-serie-1: #2f6fbe;
+  --ox-serie-2: #d9822b;
+  --ox-serie-3: #2a9d8f;
+  --ox-serie-4: #8c5bb8;
+  --ox-serie-5: #c94f7c;
+  --ox-serie-6: #5d8a2f;
+  --ox-serie-7: #b5892d;
+  --ox-serie-8: #4f6b85;
+
+  --cds-chart-muted: #c9cbcf;
+  --cds-chart-grid: #ececE7;
+  --cds-chart-axis: #b9bbbf;
+  --cds-chart-status-critical: #c0352b;
+  --cds-surface-popover: #ffffff;
+  --cds-border: #d7d8d3;
+  --cds-shadow-popover: 0 4px 16px rgba(20, 22, 26, .12);
+  --cds-text-secondary: #5f6166;
+
+  --cds-font-size-caption: .8125rem;
+  --cds-font-size-body: .9375rem;
+  --cds-font-size-heading: 1.0625rem;
+  --cds-font-size-title: 1.875rem;
+  --cds-font-weight-medium: 600;
+
+  --cds-gap-xs: .25rem;
+  --cds-gap-sm: .5rem;
+  --cds-gap-md: 1rem;
+  --cds-gap-lg: 1.5rem;
+  --cds-gap-xl: 2.5rem;
+  --cds-pad-xs: .25rem;
+  --cds-pad-sm: .5rem;
+  --cds-pad-md: .75rem;
+  --cds-pad-lg: 1.125rem;
+  --cds-pad-xl: 1.75rem;
+  --cds-radius: 8px;
+  --cds-dur-slow: 240ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-bg: #141517;
+    --color-panel: #1d1f22;
+    --color-fg: #ecedee;
+    --color-fg-muted: #a3a6ab;
+    --color-border-line: #2f3236;
+    --color-ok: #5cc27e;
+    --color-warn: #e3a646;
+    --color-bad: #f0776c;
+    --ox-serie-1: #5b9be6;
+    --ox-serie-2: #ec9a4c;
+    --ox-serie-3: #49b8aa;
+    --ox-serie-4: #a881d3;
+    --ox-serie-5: #e07399;
+    --ox-serie-6: #84b257;
+    --ox-serie-7: #d1a94e;
+    --ox-serie-8: #7d97b0;
+    --cds-chart-muted: #4a4d52;
+    --cds-chart-grid: #2a2c30;
+    --cds-chart-axis: #4e5156;
+    --cds-chart-status-critical: #f0776c;
+    --cds-surface-popover: #24272b;
+    --cds-border: #3a3d42;
+    --cds-shadow-popover: 0 6px 20px rgba(0, 0, 0, .45);
+    --cds-text-secondary: #a3a6ab;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #141517;
+  --color-panel: #1d1f22;
+  --color-fg: #ecedee;
+  --color-fg-muted: #a3a6ab;
+  --color-border-line: #2f3236;
+  --color-ok: #5cc27e;
+  --color-warn: #e3a646;
+  --color-bad: #f0776c;
+  --ox-serie-1: #5b9be6;
+  --ox-serie-2: #ec9a4c;
+  --ox-serie-3: #49b8aa;
+  --ox-serie-4: #a881d3;
+  --ox-serie-5: #e07399;
+  --ox-serie-6: #84b257;
+  --ox-serie-7: #d1a94e;
+  --ox-serie-8: #7d97b0;
+  --cds-chart-muted: #4a4d52;
+  --cds-chart-grid: #2a2c30;
+  --cds-chart-axis: #4e5156;
+  --cds-chart-status-critical: #f0776c;
+  --cds-surface-popover: #24272b;
+  --cds-border: #3a3d42;
+  --cds-shadow-popover: 0 6px 20px rgba(0, 0, 0, .45);
+  --cds-text-secondary: #a3a6ab;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font: 400 var(--cds-font-size-body)/1.45 var(--font-anthropic-sans);
+}
+#dash-root {
+  max-width: 82rem;
+  margin-inline: auto;
+  padding-block: var(--cds-pad-xl);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (min-width: 48rem) {
+  #dash-root { padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); }
+}
+#dash-root a { color: inherit; }
+#dash-root a:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+#dash-root b, #dash-root strong { font-weight: 700; }
+
+/* Barra que reemplaza a un valor mientras carga */
+.dash-skeleton { color: transparent !important; position: relative; }
+.dash-skeleton:not(.ox-chart)::after {
+  content: ""; position: absolute; inset: .2em 0; min-width: 2.5em; border-radius: 4px;
+  background: var(--color-border-line);
+}
+.ox-chart.dash-skeleton { background: linear-gradient(var(--color-border-line), var(--color-border-line)) center / 100% 1px no-repeat; }
+@media (prefers-reduced-motion: no-preference) {
+  .dash-skeleton:not(.ox-chart)::after { animation: ox-pulso 1.2s ease-in-out infinite alternate; }
+  @keyframes ox-pulso { from { opacity: .45; } to { opacity: 1; } }
+}
+
+.ox-pie { margin-top: var(--cds-gap-xl); padding-top: var(--cds-pad-lg); border-top: 1px solid var(--color-border-line); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); display: grid; gap: var(--cds-gap-xs); max-width: 80ch; }
+.ox-pie p { margin: 0; }
