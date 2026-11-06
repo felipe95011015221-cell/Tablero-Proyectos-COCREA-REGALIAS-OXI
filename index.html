@@ -95,6 +95,8 @@
 .ix-tiles { display: grid; gap: var(--cds-gap-md); grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); }
 .ix-tile { display: grid; gap: var(--cds-gap-xs); align-content: start; background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md) var(--cds-pad-lg); }
 .ix-tile-k { margin: 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.ix-tile-s { margin: 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.ix-tile-s span { color: var(--color-fg); font-weight: 600; }
 .ix-tile-v { margin: 0; font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-title); font-weight: 400; font-variant-numeric: tabular-nums; line-height: 1.1; min-height: 1.1em; }
 
 .ix-grid { display: grid; gap: var(--cds-gap-md); grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
@@ -307,11 +309,11 @@
     </div>
     <p class="ix-sel">Selección: <b data-draw="msel" data-mec="oxi" data-k="n" data-source="oxi">—</b> proyectos por <b data-draw="msel" data-mec="oxi" data-k="v" data-source="oxi">—</b></p>
     <div class="ix-tiles">
-      <div class="ix-tile"><p class="ix-tile-k">En trámite</p><p class="ix-tile-v" data-draw="mt" data-mec="oxi" data-k="1" data-source="oxi">—</p></div>
-      <div class="ix-tile"><p class="ix-tile-k">En ejecución</p><p class="ix-tile-v" data-draw="mt" data-mec="oxi" data-k="4" data-source="oxi">—</p></div>
-      <div class="ix-tile"><p class="ix-tile-k">Parados</p><p class="ix-tile-v" data-draw="mt" data-mec="oxi" data-k="5" data-source="oxi">—</p></div>
-      <div class="ix-tile"><p class="ix-tile-k">Terminados</p><p class="ix-tile-v" data-draw="mt" data-mec="oxi" data-k="6" data-source="oxi">—</p></div>
-      <div class="ix-tile"><p class="ix-tile-k">Sin información</p><p class="ix-tile-v" data-draw="mt" data-mec="oxi" data-k="7" data-source="oxi">—</p></div>
+      <div class="ix-tile"><p class="ix-tile-k">En trámite</p><p class="ix-tile-v" data-draw="mt" data-mec="oxi" data-k="1" data-source="oxi">—</p><p class="ix-tile-s">Valor: <span data-draw="mts" data-mec="oxi" data-k="1" data-f="valor_cop" data-source="oxi">—</span></p></div>
+      <div class="ix-tile"><p class="ix-tile-k">En ejecución</p><p class="ix-tile-v" data-draw="mt" data-mec="oxi" data-k="4" data-source="oxi">—</p><p class="ix-tile-s">Valor: <span data-draw="mts" data-mec="oxi" data-k="4" data-f="valor_cop" data-source="oxi">—</span></p></div>
+      <div class="ix-tile"><p class="ix-tile-k">Parados</p><p class="ix-tile-v" data-draw="mt" data-mec="oxi" data-k="5" data-source="oxi">—</p><p class="ix-tile-s">Valor: <span data-draw="mts" data-mec="oxi" data-k="5" data-f="valor_cop" data-source="oxi">—</span></p></div>
+      <div class="ix-tile"><p class="ix-tile-k">Terminados</p><p class="ix-tile-v" data-draw="mt" data-mec="oxi" data-k="6" data-source="oxi">—</p><p class="ix-tile-s">Valor: <span data-draw="mts" data-mec="oxi" data-k="6" data-f="valor_cop" data-source="oxi">—</span></p></div>
+      <div class="ix-tile"><p class="ix-tile-k">Sin información</p><p class="ix-tile-v" data-draw="mt" data-mec="oxi" data-k="7" data-source="oxi">—</p><p class="ix-tile-s">Valor: <span data-draw="mts" data-mec="oxi" data-k="7" data-f="valor_cop" data-source="oxi">—</span></p></div>
     </div>
     <div class="ix-grid">
       <div class="ix-card"><h3>Por año y estado</h3><p class="ix-sub">Clic en un año para filtrar.</p><div class="ix-chart dash-skeleton" data-draw="m-anio" data-mec="oxi" data-source="oxi"></div></div>
@@ -355,11 +357,11 @@
     </div>
     <p class="ix-sel">Selección: <b data-draw="msel" data-mec="regalias" data-k="n" data-source="regalias">—</b> proyectos por <b data-draw="msel" data-mec="regalias" data-k="v" data-source="regalias">—</b></p>
     <div class="ix-tiles">
-      <div class="ix-tile"><p class="ix-tile-k">No aprobados</p><p class="ix-tile-v" data-draw="mt" data-mec="regalias" data-k="2" data-source="regalias">—</p></div>
-      <div class="ix-tile"><p class="ix-tile-k">Aprobados sin iniciar</p><p class="ix-tile-v" data-draw="mt" data-mec="regalias" data-k="3" data-source="regalias">—</p></div>
-      <div class="ix-tile"><p class="ix-tile-k">En ejecución</p><p class="ix-tile-v" data-draw="mt" data-mec="regalias" data-k="4" data-source="regalias">—</p></div>
-      <div class="ix-tile"><p class="ix-tile-k">Parados</p><p class="ix-tile-v" data-draw="mt" data-mec="regalias" data-k="5" data-source="regalias">—</p></div>
-      <div class="ix-tile"><p class="ix-tile-k">Terminados</p><p class="ix-tile-v" data-draw="mt" data-mec="regalias" data-k="6" data-source="regalias">—</p></div>
+      <div class="ix-tile"><p class="ix-tile-k">No aprobados</p><p class="ix-tile-v" data-draw="mt" data-mec="regalias" data-k="2" data-source="regalias">—</p><p class="ix-tile-s">Valor: <span data-draw="mts" data-mec="regalias" data-k="2" data-f="valor_cop" data-source="regalias">—</span></p></div>
+      <div class="ix-tile"><p class="ix-tile-k">Aprobados sin iniciar</p><p class="ix-tile-v" data-draw="mt" data-mec="regalias" data-k="3" data-source="regalias">—</p><p class="ix-tile-s">Valor: <span data-draw="mts" data-mec="regalias" data-k="3" data-f="valor_cop" data-source="regalias">—</span></p></div>
+      <div class="ix-tile"><p class="ix-tile-k">En ejecución</p><p class="ix-tile-v" data-draw="mt" data-mec="regalias" data-k="4" data-source="regalias">—</p><p class="ix-tile-s">Valor: <span data-draw="mts" data-mec="regalias" data-k="4" data-f="valor_cop" data-source="regalias">—</span></p></div>
+      <div class="ix-tile"><p class="ix-tile-k">Parados</p><p class="ix-tile-v" data-draw="mt" data-mec="regalias" data-k="5" data-source="regalias">—</p><p class="ix-tile-s">Valor: <span data-draw="mts" data-mec="regalias" data-k="5" data-f="valor_cop" data-source="regalias">—</span></p></div>
+      <div class="ix-tile"><p class="ix-tile-k">Terminados</p><p class="ix-tile-v" data-draw="mt" data-mec="regalias" data-k="6" data-source="regalias">—</p><p class="ix-tile-s">Valor: <span data-draw="mts" data-mec="regalias" data-k="6" data-f="valor_cop" data-source="regalias">—</span></p></div>
     </div>
     <div class="ix-grid">
       <div class="ix-card"><h3>Por año y estado</h3><p class="ix-sub">Año de registro del BPIN. Clic para filtrar.</p><div class="ix-chart dash-skeleton" data-draw="m-anio" data-mec="regalias" data-source="regalias"></div></div>
@@ -441,10 +443,10 @@
     </div>
     <p class="ix-sel">Selección: <b data-draw="msel" data-mec="cocrea" data-k="n" data-source="cocrea">—</b> proyectos por <b data-draw="msel" data-mec="cocrea" data-k="v" data-source="cocrea">—</b>, de los que se solicitan a CoCrea <b data-draw="msel" data-mec="cocrea" data-k="s" data-source="cocrea">—</b></p>
     <div class="ix-tiles">
-      <div class="ix-tile"><p class="ix-tile-k">Avalados sin iniciar</p><p class="ix-tile-v" data-draw="mt" data-mec="cocrea" data-k="3" data-source="cocrea">—</p></div>
-      <div class="ix-tile"><p class="ix-tile-k">En ejecución</p><p class="ix-tile-v" data-draw="mt" data-mec="cocrea" data-k="4" data-source="cocrea">—</p></div>
-      <div class="ix-tile"><p class="ix-tile-k">Parados (aval vencido)</p><p class="ix-tile-v" data-draw="mt" data-mec="cocrea" data-k="5" data-source="cocrea">—</p></div>
-      <div class="ix-tile"><p class="ix-tile-k">Ejecutados</p><p class="ix-tile-v" data-draw="mt" data-mec="cocrea" data-k="6" data-source="cocrea">—</p></div>
+      <div class="ix-tile"><p class="ix-tile-k">Avalados sin iniciar</p><p class="ix-tile-v" data-draw="mt" data-mec="cocrea" data-k="3" data-source="cocrea">—</p><p class="ix-tile-s">Valor: <span data-draw="mts" data-mec="cocrea" data-k="3" data-f="valor_cop" data-source="cocrea">—</span></p><p class="ix-tile-s">Solicitado: <span data-draw="mts" data-mec="cocrea" data-k="3" data-f="valor_solicitado_cop" data-source="cocrea">—</span></p></div>
+      <div class="ix-tile"><p class="ix-tile-k">En ejecución</p><p class="ix-tile-v" data-draw="mt" data-mec="cocrea" data-k="4" data-source="cocrea">—</p><p class="ix-tile-s">Valor: <span data-draw="mts" data-mec="cocrea" data-k="4" data-f="valor_cop" data-source="cocrea">—</span></p><p class="ix-tile-s">Solicitado: <span data-draw="mts" data-mec="cocrea" data-k="4" data-f="valor_solicitado_cop" data-source="cocrea">—</span></p></div>
+      <div class="ix-tile"><p class="ix-tile-k">Parados (aval vencido)</p><p class="ix-tile-v" data-draw="mt" data-mec="cocrea" data-k="5" data-source="cocrea">—</p><p class="ix-tile-s">Valor: <span data-draw="mts" data-mec="cocrea" data-k="5" data-f="valor_cop" data-source="cocrea">—</span></p><p class="ix-tile-s">Solicitado: <span data-draw="mts" data-mec="cocrea" data-k="5" data-f="valor_solicitado_cop" data-source="cocrea">—</span></p></div>
+      <div class="ix-tile"><p class="ix-tile-k">Ejecutados</p><p class="ix-tile-v" data-draw="mt" data-mec="cocrea" data-k="6" data-source="cocrea">—</p><p class="ix-tile-s">Valor: <span data-draw="mts" data-mec="cocrea" data-k="6" data-f="valor_cop" data-source="cocrea">—</span></p><p class="ix-tile-s">Solicitado: <span data-draw="mts" data-mec="cocrea" data-k="6" data-f="valor_solicitado_cop" data-source="cocrea">—</span></p></div>
     </div>
     <div class="ix-grid">
       <div class="ix-card"><h3>Por convocatoria y estado</h3><p class="ix-sub">Clic en una convocatoria para filtrar.</p><div class="ix-chart dash-skeleton" data-draw="m-anio" data-mec="cocrea" data-source="cocrea"></div></div>
@@ -849,7 +851,7 @@ const IX_FICHA = { oxi: 'dnp', regalias: 'dnp', tramite: 'dnp', cocrea: 'cocrea'
 window.ixM = {};
 Object.keys(IX_DS).forEach((k) => { window.ixM[k] = { anio: '', estado: '', departamento: '', sector: '', entidad: '', estado_fuente: '', q: '', sort: 'valor_cop', dir: -1, n: 200 }; });
 const IX_CAMPOS_F = ['anio', 'estado', 'departamento', 'sector', 'entidad', 'estado_fuente'];
-const ixMDraws = ['mf', 'msel', 'mt', 'm-anio', 'm-grupo', 'm-motivo', 'm-depto', 'm-foco', 'm-sub', 'mcount', 'mtabla'];
+const ixMDraws = ['mf', 'msel', 'mt', 'mts', 'm-anio', 'm-grupo', 'm-motivo', 'm-depto', 'm-foco', 'm-sub', 'mcount', 'mtabla'];
 const ixMRedraw = (k) => {
   const s = window.ixM[k];
   document.querySelectorAll('.ix-mlimpiar[data-mec="' + k + '"]').forEach((b) => { b.hidden = !(IX_CAMPOS_F.some((f) => s[f]) || s.q); });
@@ -913,6 +915,14 @@ dash.draw('mt', (el) => {
   if (!ix.ready(el, d, false)) return;
   const e = ix.ESTADOS[Number(el.dataset.k) - 1];
   el.textContent = ix.num(ixMFiltrar(el.dataset.mec, d.data, 'estado').filter((p) => p.estado === e).length);
+});
+// Suma del valor de los proyectos de un estado (cuadros de cada pestaña); respeta los filtros salvo el de estado
+dash.draw('mts', (el) => {
+  const d = ixMData(el);
+  if (!ix.ready(el, d, false)) return;
+  const e = ix.ESTADOS[Number(el.dataset.k) - 1];
+  const rows = ixMFiltrar(el.dataset.mec, d.data, 'estado').filter((p) => p.estado === e);
+  el.textContent = ix.copCompleto(d3.sum(rows, (p) => Number(p[el.dataset.f] || 0)));
 });
 const ixPorEstado = (v) => [1, 2, 3, 4, 5, 6, 7].map((o) => ({ o, n: v.filter((p) => ix.ordenEstado(p.estado) === o).length }));
 const ixEstadoTip = (por) => por.filter((s) => s.n).map((s) => ix.ESTADOS[s.o - 1] + ': ' + ix.num(s.n));
