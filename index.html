@@ -148,6 +148,125 @@
 
 [data-dash-source-state=empty] { color: transparent; }
 [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+
+/* ============ Diseño v2 · azul y blanco ============ */
+#dash-root .ix {
+  --ix-azul-900: #071d44; --ix-azul-800: #0b2a5b; --ix-azul-700: #124a99; --ix-azul-600: #1f63b8;
+  --ix-azul-500: #3b82d6; --ix-azul-400: #6fa8e6; --ix-azul-200: #cfe0f5; --ix-azul-100: #e3edfa; --ix-azul-50: #f3f8fe;
+  --ix-sombra: 0 1px 2px rgba(11, 42, 91, .06), 0 10px 28px rgba(11, 42, 91, .07);
+  --ix-sombra-alta: 0 2px 4px rgba(11, 42, 91, .08), 0 16px 38px rgba(11, 42, 91, .14);
+  background: linear-gradient(180deg, #eaf3ff 0, #ffffff 560px);
+  border: 0;
+  border-radius: 24px;
+  padding: clamp(14px, 3vw, 34px);
+  gap: clamp(22px, 3vw, 34px);
+  box-shadow: 0 20px 60px rgba(11, 42, 91, .10);
+}
+
+/* Portada */
+.ix-head {
+  position: relative; overflow: hidden; max-width: none;
+  padding: clamp(22px, 4vw, 46px);
+  border-radius: 22px;
+  background:
+    radial-gradient(900px 380px at 92% -25%, rgba(111, 168, 230, .55), transparent 62%),
+    linear-gradient(135deg, #071d44 0%, #0b2a5b 46%, #1f63b8 100%);
+  box-shadow: var(--ix-sombra-alta);
+  gap: 14px;
+}
+.ix-head::before, .ix-head::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; border: 40px solid rgba(255, 255, 255, .06); }
+.ix-head::before { width: 320px; height: 320px; right: -70px; bottom: -120px; }
+.ix-head::after { width: 150px; height: 150px; right: 190px; top: -70px; border-width: 22px; }
+.ix-head > * { position: relative; z-index: 1; }
+.ix-eyebrow { color: #bcd6f2; letter-spacing: .14em; font-weight: 600; }
+.ix-head h1 { color: #ffffff; font-size: clamp(1.9rem, 4.6vw, 3rem); line-height: 1.08; }
+.ix-take { color: #e3edfa; font-size: 1.0625rem; max-width: 64ch; }
+.ix .ix-take b { color: #ffffff; background: rgba(255, 255, 255, .14); padding: 0 .35em; border-radius: 6px; }
+.ix-hero-stats { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr)); margin-top: 8px; }
+.ix-hero-stats > div { display: grid; gap: 2px; padding: 12px 16px; border-radius: 14px; background: rgba(255, 255, 255, .10); border: 1px solid rgba(255, 255, 255, .20); }
+.ix-hs-k { font-size: .75rem; color: #bcd6f2; letter-spacing: .04em; }
+.ix-hero-stats b { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 1.9rem; color: #ffffff; font-variant-numeric: tabular-nums; line-height: 1.1; min-height: 1.1em; }
+.ix-hs-s { font-size: .75rem; color: #cfe0f5; }
+
+/* Pestañas */
+.ix-tabs { width: fit-content; max-width: 100%; overflow-x: auto; background: #ffffff; border: 1px solid var(--ix-azul-100); border-radius: 999px; padding: 6px; gap: 4px; box-shadow: var(--ix-sombra); }
+.ix-tab { border: 0; border-radius: 999px; padding: 9px 18px; font-weight: 600; color: var(--ix-azul-700); margin-bottom: 0; white-space: nowrap; transition: background .18s, color .18s; }
+.ix-tab:hover { background: var(--ix-azul-50); }
+.ix-tab[aria-selected="true"] { background: linear-gradient(135deg, #1f63b8, #0b2a5b); color: #ffffff; border-bottom-color: transparent; box-shadow: 0 4px 12px rgba(31, 99, 184, .35); }
+
+/* Títulos de sección */
+.ix-page > h2 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: 1.7rem; color: var(--ix-azul-800); display: flex; align-items: center; gap: 12px; }
+.ix-page > h2::before { content: ""; width: 6px; height: 1.15em; border-radius: 3px; background: linear-gradient(var(--ix-azul-400), var(--ix-azul-700)); }
+.ix-lede { color: #3d5680; }
+
+/* Tarjetas */
+.ix-card, .ix-mec, .ix-tile, .ix-filters, .ix-estados li { border: 1px solid var(--ix-azul-100); border-radius: 16px; box-shadow: var(--ix-sombra); }
+.ix-card { padding: 20px 22px; transition: box-shadow .2s; }
+.ix-card h3 { color: var(--ix-azul-800); font-size: 1.125rem; }
+@media (hover: hover) { .ix-card:hover, .ix-mec:hover { box-shadow: var(--ix-sombra-alta); } }
+.ix-mec { position: relative; overflow: hidden; padding: 24px 22px 20px; transition: box-shadow .2s; }
+.ix-mec::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 5px; background: var(--ix-azul-600); }
+#mec-oxi::before { background: linear-gradient(90deg, #1f63b8, #3b82d6); }
+#mec-regalias::before { background: linear-gradient(90deg, #6fa8e6, #a8cdf2); }
+#mec-cocrea::before { background: linear-gradient(90deg, #0b2a5b, #124a99); }
+.ix-big { color: var(--ix-azul-800); font-size: clamp(1.5rem, 2.6vw, 2.2rem); white-space: nowrap; }
+.ix-mini { height: 12px; border-radius: 6px; background: var(--ix-azul-100); }
+.ix-kv dd { color: var(--ix-azul-800); font-weight: 600; }
+.ix-sw { border-radius: 4px; }
+
+/* Cuadros de estado */
+.ix-tile { position: relative; background: linear-gradient(180deg, #ffffff 0, var(--ix-azul-50) 100%); padding: 16px 18px 16px 24px; }
+.ix-tile::before { content: ""; position: absolute; left: 0; top: 14px; bottom: 14px; width: 5px; border-radius: 0 5px 5px 0; background: var(--ix-azul-500); }
+.ix-tile:has([data-k="1"])::before { background: var(--ix-e1); }
+.ix-tile:has([data-k="2"])::before { background: var(--ix-azul-200); }
+.ix-tile:has([data-k="3"])::before { background: var(--ix-e3); }
+.ix-tile:has([data-k="4"])::before { background: var(--ix-e4); }
+.ix-tile:has([data-k="5"])::before { background: var(--ix-e5); }
+.ix-tile:has([data-k="6"])::before { background: var(--ix-e6); }
+.ix-tile:has([data-k="7"])::before { background: var(--ix-e7); }
+.ix-tile-k { color: var(--ix-azul-700); font-weight: 600; }
+.ix-tile-v { color: var(--ix-azul-800); font-size: 2.1rem; }
+
+/* Filtros y botones */
+.ix-filters { background: #ffffff; padding: 16px 18px; gap: 12px; }
+.ix-field { font-weight: 700; color: var(--ix-azul-700); font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; }
+.ix-field select, .ix-field input { border: 1.5px solid var(--ix-azul-200); border-radius: 10px; padding: 9px 12px; background: var(--ix-azul-50); text-transform: none; letter-spacing: 0; font-weight: 400; font-size: .875rem; transition: border-color .15s, box-shadow .15s; }
+.ix-field select:hover, .ix-field input:hover { border-color: var(--ix-azul-400); }
+.ix-field select:focus, .ix-field input:focus { border-color: var(--ix-azul-600); box-shadow: 0 0 0 3px rgba(31, 99, 184, .18); }
+.ix-btn, .ix-chip { border: 1.5px solid var(--ix-azul-200); border-radius: 10px; background: #ffffff; color: var(--ix-azul-700); font-weight: 600; transition: background .15s, border-color .15s; }
+.ix-chip { border-radius: 999px; }
+.ix-btn:hover, .ix-chip:hover { background: var(--ix-azul-50); border-color: var(--ix-azul-400); }
+.ix-tab:focus-visible, .ix-chip:focus-visible, .ix-btn:focus-visible, .ix-th:focus-visible, .ix-field select:focus-visible, .ix-field input:focus-visible { outline: 2px solid var(--ix-azul-500); outline-offset: 2px; }
+.ix-sel { color: var(--ix-azul-800); }
+
+/* Tablas */
+.ix-tablewrap { border: 1px solid var(--ix-azul-100); border-radius: 12px; }
+.ix-table th { background: var(--ix-azul-50); color: var(--ix-azul-800); font-weight: 700; text-transform: uppercase; font-size: .7rem; letter-spacing: .06em; border-bottom: 1px solid var(--ix-azul-200); padding: 10px 12px; }
+.ix-table td { border-bottom: 1px solid var(--ix-azul-100); padding: 10px 12px; }
+.ix-table tbody tr:nth-child(even) td { background: #fafcff; }
+.ix-table tbody tr:hover td { background: var(--ix-azul-50); }
+.ix-name a { color: var(--ix-azul-700); text-decoration-color: var(--ix-azul-200); }
+.ix-name a:hover { color: var(--ix-azul-900); text-decoration-color: var(--ix-azul-500); }
+.ix-pill { font-weight: 600; background: color-mix(in srgb, currentColor 10%, white); border-color: color-mix(in srgb, currentColor 35%, white); }
+
+/* Método */
+.ix-estados li { background: #ffffff; padding: 16px 18px; }
+.ix-notes { max-width: 90ch; }
+
+/* Movimiento sutil al cambiar de pestaña */
+@media (prefers-reduced-motion: no-preference) {
+  .ix-page:not([hidden]) { animation: ix-entra .35s ease both; }
+  @keyframes ix-entra { from { opacity: .4; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+}
+@media (max-width: 40rem) {
+  .ix-head::before, .ix-head::after { display: none; }
+  .ix-tabs { flex-wrap: nowrap; }
+  .ix-tab { padding: 8px 14px; }
+  .ix-hero-stats { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .ix-hero-stats > div { padding: 10px 12px; }
+  .ix-hero-stats b { font-size: 1.5rem; }
+  .ix-head h1 { font-size: 1.85rem; }
+}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <script src="web/dash.js" data-base="./" data-preload="no"
@@ -161,6 +280,12 @@
     <p class="ix-eyebrow">Seguimiento · Obras por Impuestos, Regalías y CoCrea · 2020–2026</p>
     <h1>Proyectos OxI, Regalías y CoCrea</h1>
     <p class="ix-take">Entre 2020 y 2026 los tres mecanismos suman <b data-draw="kv" data-source="totales" data-field="proyectos" data-where="mecanismo=Total" class="dash-skeleton">—</b> proyectos. Ya salieron del trámite <b data-draw="kv" data-source="totales" data-field="aprobados" data-where="mecanismo=Total" class="dash-skeleton">—</b>: de ellos <b data-draw="kv" data-source="totales" data-field="terminados" data-where="mecanismo=Total" class="dash-skeleton">—</b> están terminados y <b data-draw="kv" data-source="totales" data-field="parados" data-where="mecanismo=Total" class="dash-skeleton">—</b> están parados. El mecanismo con más proyectos parados en proporción es <b data-draw="peor" data-source="totales" class="dash-skeleton">—</b>.</p>
+    <div class="ix-hero-stats">
+      <div><span class="ix-hs-k">Obras por Impuestos</span><b data-draw="kv" data-source="totales" data-field="proyectos" data-where="mecanismo=OxI" class="dash-skeleton">—</b><span class="ix-hs-s">proyectos</span></div>
+      <div><span class="ix-hs-k">Regalías</span><b data-draw="kv" data-source="totales" data-field="proyectos" data-where="mecanismo=Regalías" class="dash-skeleton">—</b><span class="ix-hs-s">proyectos</span></div>
+      <div><span class="ix-hs-k">CoCrea</span><b data-draw="kv" data-source="totales" data-field="proyectos" data-where="mecanismo=CoCrea" class="dash-skeleton">—</b><span class="ix-hs-s">proyectos</span></div>
+      <div><span class="ix-hs-k">Parados en total</span><b data-draw="kv" data-source="totales" data-field="parados" data-where="mecanismo=Total" class="dash-skeleton">—</b><span class="ix-hs-s">proyectos</span></div>
+    </div>
   </header>
 
   <nav class="ix-tabs" role="tablist" aria-label="Secciones">
